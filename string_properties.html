@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRODUCTION TO JAVASCRIPT | STRING PROPERTIES</title>
+</head>
+<body>
+    <h3>INTRODUCTION TO JAVASCRIPT</h3>
+    <h1>String Properties</h1>
+
+    <P>
+        All datatypes have access to specific properties that when appended to it, a result is achieved. For instance
+        <b>Strings</b> have the <b>Length</b> property that stores the number of characters in that string. <br>
+        You can retrieve property information by appending the string with a period and the property name.
+
+        The <b>. Operator</b> is used to add the string to the property. <br>
+        <b>See Code Sample Below</b>
+    </P>
+
+    <img src="image/string7.PNG" alt="">
+
+    <script>
+        console.log('Techmate'.length);
+        // Will output 8
+    </script>
+
+    <h2>Javascript Methods</h2>
+
+    <p>
+        In JavaScript methods are object properties containing a function definition. Within the function
+        definition, this can be used to refer to the containing object as long as the function is defined 
+        within the object. <br><br>
+
+        <i>
+            Note: If a function is assigned to a property later, any reference to this will reflect the 
+            context of the new function. Also, if the object’s function is assigned to a variable and executed
+            via the variable, this will reflect the variable’s execution context.
+        </i>
+    </p>
+    <dl> <h3>Syntax:</h3>
+        <dd>objectName.methodName();</dd>
+    </dl>
+
+    <p><b>See Code sample below</b></p>
+
+    <img src="image/method.PNG" alt=""> <br>
+
+    <script>
+        console.log('techmate'.toUpperCase()); // prints TECHMATE
+        console.log('Techmate'.startsWith('T')); // Prints true  
+    </script>
+
+    <p>
+        The <b>toUpperCase()</b> changes the string text that were on lower case to an all upper case. <br><br>
+        the <b>startsWith()</b> checks if the string starts with the letter in the parenthesis and returns a
+        <b>Bolean</b> value which is <b>True or False</b>.
+    </p>
+
+
+    <h1>Add more materials on Methods</h1>
+
+
+
+
+
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="string_concatenation.html">BACK</a></button>
+        <button class="next-btn"><a href="math.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
