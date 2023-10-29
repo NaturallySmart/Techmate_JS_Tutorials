@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARIABLES | Assignment Operator</title>
+</head>
+<body>
+    <h4>VARIABLES</h4>
+
+    <h1>JavaScript Assignment Operator</h1>
+    <h3>The = Operator</h3>
+    <p>The Simple Assignment Operator assigns a value to a variable.</p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/variables/operator.PNG" alt="Code Sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+
+        let a = 10;
+
+        document.getElementById('example1').innerHTML = "The value of a is " + a;
+
+    </script>
+
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/variables/operator2.PNG" alt="Code Sample"> <br>
+
+    <p id="example2"></p>
+
+    <script>
+        let b = 50;
+        let c = 10 + b;
+
+        document.getElementById('example2').innerHTML = "The value of c is " + c;
+    </script>
+
+
+    <h3>The += Operator</h3>
+    <p>The Addition Assignment Operator adds a value to a variable.</p>
+
+    <h2><i>Example 3</i></h2>
+
+    <img src="image/variables/operator3.PNG" alt="Code Sample"> <br>
+
+    <p id="example3"></p>
+
+    <script>
+
+        let d = 10;
+            d += 5;
+
+        document.getElementById('example3').innerHTML = "The value of d is " + d;
+
+    </script>
+
+
+
+    <h2><i>Example 4</i></h2>
+
+    <img src="image/variables/operator4.PNG" alt="Code Sample"> <br>
+
+    <p id="example4"></p>
+
+    <script>
+        let text = "Hello";
+            text += " Techmate";
+
+        document.getElementById('example4').innerHTML = text;     
+    </script>
+
+
+
+    <h3>The -= Operator</h3>
+    <p>The Subtraction Assignment Operator subtracts a value from a variable.</p>
+
+    <p><i>Code Example: let x = 10; x -= 5; This will subract 5 from 10</i></p>
+
+    <h4>Other types of Assignment Operators are:</h4>
+    <ul>
+        <li>The  Multiplication (*=) Operator</li>
+        <li>The Exponential (**=) Operator</li>
+        <li>The Division (/=) Operator</li>
+        <li>The Remainder (%=) Operator</li>
+    </ul>
+
+    <img src="image/variables/operator5.PNG" alt="Code Sample">
+
+    <script>
+        let x = 15;
+        x -= 3; // Can be written as x = x - 3
+        console.log(x); // Output: 12
+
+        let y = 10;
+        y *= 5; // Can be written as y = y * 5
+        console.log(y); // Output: 50
+
+        let z = 20;
+        z /= 10; // Can be written as z = z / 10
+        console.log(z); // Output: 2
+    </script>
+    <br><br>
+
+    <h2>The Increment and Decrement Operator</h2>
+
+    <p>
+        Other mathematical assignment operators include the increment operator (++) and decrement operator (--). <br><br>
+        The increment operator (++) is used to increase the value of a variable by one, while the decrement 
+        operator (--) is used to decrease the value of a variable by one. <br><br>
+
+        <b>See Code Sample below:</b>
+    </p>
+
+    <img src="image/variables/operator6.PNG" alt="Code Sample">
+
+    <script>
+        let num = 7;
+        num++; // Increase num by 1
+        console.log(num); // Output: 8
+
+        let count = 10;
+        count--; // Decrease count by 1
+        console.log(count); // Output: 9    
+    </script>
+
+    
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="variables.html">BACK</a></button>
+        <button class="next-btn"><a href="string_concat_with_var.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
