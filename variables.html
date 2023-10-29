@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    
+    <h1>Variables</h1>
+
+    <p>
+        <strong>Variables</strong> in Javascript are used to store and manipulate data in a dynamic way. They 
+        do this by using a label to represent the data rather than using the data itself. Any of the data types
+        which we ave learnt before can be stored in a variable. We create or declare a variable by using the 
+        key word <b>var</b>. <br> <br>
+
+        <b>Syntax:</b> <br>
+        <i>var myName;</i> <br>
+        In this example, "myName" is the name of our variable and it has been declared with the keyword var. 
+        <br> <br>
+
+        creates a variable called myName. In JavaScript we end statements with semicolons. Variable names can 
+        be made up of numbers, letters, and $ or _, but may not contain spaces or start with a number. <br><br>
+
+        Variables can also be created using the <b>let</b> and the <b>const</b> keywords.            
+    </p>
+
+    <h2>Creating a Variable using <i>var</i></h2>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/variables/variables.PNG" alt=""> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        // Create a variable called 'myCar'
+        var myCar = 'Audi';
+
+       document.getElementById('example1').innerHTML = myCar;
+
+        // Will output Audi        
+        // document.getElementById('example1').innerHTML = `The name of my car is ${myCar}`;
+    </script>
+
+    <p>In the above example:</p>
+
+    <ol>
+        <li><b>var,</b> is the short form of variable used to create or declare a new variable </li>
+        <li>
+            <b>myCar,</b> is the variable’s name. Capitalizing in this way is a standard convention in 
+            JavaScript called camel casing. In camel casing you group words into one, the first word is 
+            lowercase, then every word that follows will have its first letter uppercased. 
+            (e.g. camelCaseEverything).
+        </li>
+        <li><b>'=',</b> assigns the value 'Audi' to the variable.</li>
+        <li><b>Audi,</b> is the value assigned to the variable</li>
+    </ol>
+
+    <p>
+        <b>Note:</b> variables are case sensitive. For instance the variable <b><i>myCar</i></b> is not same
+        with <b><i>mycar</i></b>.
+    </p> <br><br>
+
+    <h2>Creating a Variable using <i>let</i></h2>   
+
+    <p>
+        The <b>let</b> keyword signals that the variable can be reassigned a different value. See example below:
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/variables/variables2.PNG" alt="code sample"> <br>
+
+    <p id="example2"></p>
+    <p id="example2.1"></p>
+
+    <script>
+        let phone = 'iphone';
+
+        document.getElementById('example2').innerHTML = phone;
+
+        phone = 'Samsung';
+
+        document.getElementById('example2.1').innerHTML = phone;
+    </script>
+
+    <p>
+        In the above example, you will notice that the variable phone was redeclared without using the <b>let</b>
+        keyword when it was reassigned to "samsung".
+    </p>
+
+    <p>
+        When also using the the <b>var</b> and the <b>let</b> keyword, we can declare a variable without assigning 
+        a value to it (this will output undefined). The value can be assigned to it later in the code. <br>
+        <b>See code sample below</b>
+    </p>
+
+    <img src="image/variables/var3.PNG" alt="">
+
+    <script>
+        let car;
+        console.log(car); // Output: undefined
+
+        car = 'Benz';
+
+        console.log(car); // Output: Benz
+    </script>
+
+    <br><br>
+
+    <h2>Creating a Variable using <i>const</i></h2>
+
+    <p>
+        <b>const</b> stands for constant. It is also used to declare a variable. However, a const variable 
+        cannot be reassigned because it is constant. If you try to reassign a const variable, you’ll get a 
+        TypeError. <br><br>
+
+        Constant variables must be assigned a value when declared. If you try to declare a const variable 
+        without a value, you’ll get a SyntaxError.
+    </p>
+
+    <h2><i>Example 3</i></h2>
+
+    <img src="image/variables/var4.PNG" alt="code sample"> <br>
+
+    <p id="example3"></p>
+
+    <script>
+        const color = 'blue';
+
+        document.getElementById('example3').innerHTML = color;
+    </script>
+    <br>
+
+    <h3><i>Note:</i></h3>
+    <p>
+        If you’re trying to decide between which keyword to use, let or const, think about whether
+        you’ll need to reassign the variable later on. If you do need to reassign the variable use let, 
+        otherwise, use const.
+    </p>
+
+    <h2><i>Example 4</i></h2>
+
+    <img src="image/variables/var5.PNG" alt="Code Sample"> <br>
+
+    <p id="example4"></p>
+
+    <script>
+        const currency = '$';
+
+        let devAnnualSalary = 120000;
+
+        document.getElementById('example4').innerHTML = `The average salary for a developer is
+        ${currency + devAnnualSalary}.`;
+
+         // Output: The average salary for a developer is $120000.
+    </script>
+
+
+
+
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="math.html">BACK</a></button>
+        <button class="next-btn"><a href="assignment_operator.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
