@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather</title>
+</head>
+<body>
+
+    <h2><i>Project 1</i></h2>
+    
+  <h1>Kelvin Weather</h1>
+<p>Deep in his mountain-side meteorology lab, the mad scientist Kelvin has mastered weather prediction.</p>
+
+<p>Recently, Kelvin began publishing his weather forecasts on his website. However there’s a problem: 
+    All of his forecasts describe the temperature in Kelvin.</p>
+
+<p>With our knowledge of JavaScript, let’s convert Kelvin to Celsius, then to Fahrenheit.</p>
+
+<img src="image/variables/kelvinweather.PNG" alt="Code Sample"> <br>
+
+<p id="project1"></p>
+
+<script>
+
+    // declaring the constant variable kelvin with a value of 293
+    const Kelvin = 293;
+
+    // since celcius is 273 less than kelvin    
+    let Celcius = Kelvin - 273;
+
+    // //calculating fahrenheit
+    let Fahrenheit = Celcius * (9 / 5) + 32;
+
+    // //rounding up the the value of fahrenheit to remove the decimal using the .floor() method
+    Fahrenheit = Math.floor(Fahrenheit);
+
+    // interpolating the string to replace temperature
+
+    document.getElementById('project1').innerHTML = `the current temperature is ${Fahrenheit} degrees temperature.`;
+</script>
+
+
+<h2><i>Project 2</i></h2>
+
+<h1>Newton weather</h1>
+
+<p>Convert celsius to the Newton scale using the equation below</p>
+<p>Newton = Celsius * (33/100)</p>
+
+<p>Round down the Newton temperature using the .floor() method</p>
+<p>Use document.getElementById and string interpolation to output the temperature in newton</p>
+
+<img src="image/variables/newtonweather.PNG" alt="Code Sample"> <br>
+
+<p id="project2"></p>
+
+<script>
+    const Kelvin2 = 293;
+    let Celcius2 = Kelvin2 - 273;
+    let Newton = Celcius2 * (33 / 100) + 32;
+
+    Newton= Math.floor(Newton);
+
+    document.getElementById('project2').innerHTML = `the temperature is ${Newton} newton degrees temperature.`;
+</script>
+
+<div class="nav-button">
+    <button class="back-btn"><a href="typeof_operator.html">BACK</a></button>
+    <button class="next-btn"><a href="dogyears_project.html">NEXT</a></button>          
+</div>
+
+
+</body>
+</html>
