@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARIABLES | String Concatenation with Variables</title>
+</head>
+<body>
+    
+    <h3>VARIABLES</h3>
+    <h1>String Concatenation and Interpolation with Variables</h1>
+
+    <p>
+        In previous Lessons, we assigned strings to variables. We have also learnt how to join, connect or 
+        concatenate more than one strings together. Now lets look at how to join or concatenate strings in 
+        variables. <br><br>
+        The + operator can be used to combine two string values even if those values are being stored in variables:
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/variables/string.PNG" alt="Code Sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        let myFavouriteFootballClub = "Chelsea";
+
+        //using interpolation
+
+        document.getElementById('example1').innerHTML = `Blue is the official colour of ${myFavouriteFootballClub}.`;
+
+        //document.write('Blue is the official colour of ' + myFavouriteFootballClub +'.');
+
+        //console.log('Blue is the official colour of ' + myFavouriteFootballClub +'.');
+
+        // Output: Blue is the official colour of Chelsea.
+    </script>
+
+    <p>
+        In the above Example, string Interpolation is used in the innerHTML method while Concatenation is used
+        in the other methods.
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/variables/string2.PNG" alt="Code Sample"> <br>
+
+    <p><b>Output:</b></p>
+
+    <p id="example2"></p>
+
+    <script>
+        const club = "Chelsea";
+        const officialColor = "Blue";
+
+        // using interpolation
+        //document.getElementById('example2').innerHTML = `The official colour of ${club} is ${officialColor}.`;
+
+        //using concatenation
+
+        document.getElementById('example2').innerHTML = 'The official colour of ' + club + ' is ' + officialColor  +"."; 
+    </script>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="assignment_operator.html">BACK</a></button>
+        <button class="next-btn"><a href="typeof_operator.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
