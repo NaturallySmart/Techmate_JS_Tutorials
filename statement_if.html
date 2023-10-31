@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Statements</title>
+</head>
+<body>
+    <h3>Conditional statements</h3>
+
+    <h1>If Statement</h1>
+
+    <p>
+        Sometimes we perform a task based on a certain condition. For instance, if i get paid salary today, I will 
+        go shopping, if I get home, I will eat etc. <br><br>
+
+        In programming, we can also perform similar tasks that are based on conditions using the <i>if statement</i>.
+        <br><br>
+
+        <b>See Code Sample and Output below:</b>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/statements/if.PNG" alt="Code Sample"> <br>
+
+    <p id="example1"></p> <br><br>
+
+    <script>
+        let salary = "paid";
+        // If statement to check the value of 'time' variable
+        if (salary == "paid") {
+            document.getElementById("example1").innerHTML = "Let's go stopping!";
+            }
+    </script>
+
+    <p>In the Example above, we have an if statement which comprises of the</p>
+
+    <ul>
+        <li>The <i>if Keyword</i></li>
+        <li>Condition - salary is equal to paid, inside a parenthesis ( )</li>        
+        <li>The curly brace { } which contains the block of code to execute if the condition is correct.</li>
+    </ul>
+
+    <p>If the condition is not met, no code will execute</p>
+
+    <h3>Let's try another example using console.log</h3>
+
+    <img src="image/statements/if2.PNG" alt="Code Sample">
+
+    <script>
+        let salaryPaid = true;
+
+        if(true){
+            console.log("Buy some New Clothes");
+
+            // Prints Buy New Clothes
+        }
+    </script>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="statement_intro.html">BACK</a></button>
+        <button class="next-btn"><a href="statement_if_else.html">LETS'S GO</a></button>          
+    </div>
+</body>
+</html>
