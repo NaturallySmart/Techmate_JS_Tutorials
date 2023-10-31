@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Years</title>
+</head>
+<body>
+    <h1><i>Project (Dog Years)</i></h1>
+
+    <img src="image/variables/dogyears.PNG" alt="Code Sample"> <br>
+
+        <p id="project"></p>
+    <script>
+        // creating a variable named myAge with a value of 36
+        const myAge = 36;
+
+        // creating a variable named earlyYears with a vaue of 2
+        let earlyYears = 2;
+
+        earlyYears *= 10.5; 
+
+        // the laterYears variable
+        let laterYears = myAge - 2;
+
+        // using the multiplication assignment to assign 4 to the variable laterYears
+        laterYears *= 4;
+
+        // console.log(earlyYears);
+        // console.log(laterYears);
+
+        // adding earlyYears and laterYears and assigning to a new variable
+        let myAgeInDogYears = earlyYears + laterYears;
+
+        let myName = 'Ose Nathan'.toLowerCase();
+
+        document.getElementById('project').innerHTML = `My name is ${myName}. I am ${myAge}
+        years old in human years which is ${myAgeInDogYears} years in dog years.`;
+    </script>
+
+
+<div class="nav-button">
+    <button class="back-btn"><a href="project1.html">BACK</a></button>
+    <button class="next-btn"><a href="statement_intro.html">NEXT</a></button>          
+</div>
+</body>
+</html>
