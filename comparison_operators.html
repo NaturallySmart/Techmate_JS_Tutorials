@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Comparison and Logical Operators</title>
+</head>
+<body>
+    
+    <h3>JavaScript Comparison and Logical Operators</h3>
+
+    <p>Comparison and Logical operators are used to test for true or false.</p>
+
+    <h1>Comparison Operators</h1>
+
+    <p>
+        When writing conditional statements, sometimes we need to use different types of operators to compare
+        values. These operators are called comparison operators. <br><br>
+
+        Below is a list of some handy comparison operators and their syntax:
+
+        <li>Less than: < </li>
+        <li>Greater than: > </li>
+        <li>Less than or equal to: <=</li>
+        <li>Greater than or equal to: >=</li>
+        <li>Is equal to: ===</li>
+        <li>Is not equal to: !==</li> <br><br>
+
+        Comparison operators compare the value on the left with the value on the right. <br><br>
+
+        It can be helpful to think of comparison statements as questions. When the answer is “yes”, the
+        statement evaluates to true, and when the answer is “no”, the statement evaluates to false. <br><br>
+
+        Comparison statement can be used for both numbers and strings. <br><br>
+
+        <b>Here are some Code Samples</b>
+    </p>
+
+    <p>Given that x = 5, the table below explains the comparison operators:</p>
+    <img src="image/statements/comparison_table1.PNG" alt="Comparison table">
+    <img src="image/statements/comparison_table2.PNG" alt="Comparison table"> <br>
+
+    <h2><i>Example 1</i></h2>
+    <h3>The == (Equal to) Operator</h3>
+
+    <p id="example1"></p>
+    <img src="image/statements/comparison_code1.PNG" alt="Code Sample">
+
+    <script>
+        let a = 10;
+       // document.getElementById('example1').innerHTML = (a == 12);  //outputs false
+
+      // document.getElementById('example1').innerHTML = (a == 10);  //outputs true
+
+        document.getElementById('example1').innerHTML = (a == '10');  //outputs true
+
+    </script>
+
+    <h2>How Can it be Used</h2>
+    <p>
+        Comparison operators can be used in conditional statements to compare values and take action 
+        depending on the result:
+    </p>
+   <img src="image/statements/comparison_use.PNG" alt="">
+
+   <h1>Logical Operators</h1>
+   <p>
+        Logical operators are used to determine the logic between variables or values. They
+        are often used in conditional statements to add another layer of logic to our code.
+    </p>
+
+   <p><i>Given that x = 6 and y = 3, the table below explains the logical operators:</i></p>
+   <img src="image/statements/logical_operator.PNG" alt="logical_operator">
+
+
+   <h3>The && Operator (Logical AND)</h3>
+   <p>The && operator returns true if both expressions are true, otherwise it returns false.</p>
+
+   <h3>The || Operator (Logical OR)</h3>
+   <p>The || operator returns true if one out of the two expressions are true, otherwise it returns false.</p>
+
+   <h3>The ! Operator (Logical NOT)</h3>
+   <p>
+        The ! operator otehrwise known as the bang operator takes a true value and return it as false or it will
+        take a false value and return it as true.
+    </p>
+
+   <h2><i>Example 2</i></h2>
+        
+    <img src="image/statements/logiicalcode.PNG" alt="Code Sample"> <br>
+
+   <p id="example2"></p>
+
+   <script>
+        let x = 6;
+        let y = 3;
+
+        // The && Operator (Logical AND)
+
+        // document.getElementById("example2").innerHTML = 
+        // (x < 10 && y > 1) + "<br>" +  // will outputs True
+        // (x < 10 && y < 1);   // will outputs False
+
+
+        // The || Operator (Logical OR)
+
+        // document.getElementById('example2').innerHTML = 
+        // (x == 5 || y == 5) + "<br>" + // will return False
+        // (x >= 5 || y == 5) + "<br>" + // will return True
+        // (x >= 5 || y == 3) + "<br>"  // will return True
+
+         // The ! Operator (Logical NOT)
+
+        document.getElementById('example2').innerHTML = !(x == y) //will output True
+
+    </script>
+
+
+
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="statement_if_else.html">BACK</a></button>
+        <button class="next-btn"><a href="truthy_falsy.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
