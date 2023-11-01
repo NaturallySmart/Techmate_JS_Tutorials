@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If..else Statement</title>
+</head>
+<body>
+
+    <h3>CONDITIONAL STATEMENTS</h3>
+    <h1>If and Else Statements</h1>
+
+    <p>
+        The <i>if statement</i>, is used to check for only one outcome. But many times, there might be different 
+        outcomes attached to more than one condition. <br><br>
+
+        For instance, if i get paid today, I will go shopping, if not, I will stay at home. <br><br>
+
+        The <i>if and else</i> statement checks for two possible outcomes and execute the one that matches with the 
+        condition in the parenthesis.
+
+        <b>Now let's see a code sample and output for this</b>.
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/statements/else.PNG" alt="Code Sample"> <br>
+
+    <p id="example1"></p> <br><br>
+
+    <script>
+        const salaryPaid = true;
+
+        if(false) {
+            document.getElementById("example1").innerHTML = "I will stay at home!";
+        } else {
+            document.getElementById("example1").innerHTML = "I will go shopping!";
+        }
+    </script>
+
+    <p>
+        In the example above, the <i>else statement</i> is executed because the <i>if statement</i> did not meet 
+        the condition.
+    </p>
+
+    <p>
+        The if and else statement can also be used to generate a time based greeting. <br>
+        Let's say we want to display different messages depending on the current hour of the day. <br><br>
+
+        <b>See Example below</b>
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/statements/else2.PNG" alt="Code Sample">
+
+    <p id="example2"></p>
+
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+
+        if (hour < 18) {
+            greeting = "How's your day going?";
+        } else {
+            greeting = "It's Night Time!";
+        }
+        document.getElementById('example2').innerHTML = greeting;
+    </script>
+
+
+    <h1>else If statement</h1>
+
+    <p>
+        The <i>else..if statement</i> is used to specify a new condition if the first condition is false.
+    </p>
+
+    <h2><i>Example 3</i></h2>
+    <p>If time is less than 12:00, create a "Good morning" greeting, if not, but time is less than 16:00,
+      create a "Good afternoon" greeting, otherwise a "Good evening":</p>
+
+      <img src="image/statements/ifelse.PNG" alt="Code Sample"> <br>
+
+      <p id="example3"></p>      
+ 
+      <script>
+         const time = new Date().getHours();
+         let greet;
+      
+         if ( time < 12) {
+             greet = "Good morning User";
+         } else if (time < 16) {
+             greet = "Good afternoon User";
+         } else {
+             greet = "Good evening User";
+         }
+ 
+         document.getElementById('example3').innerHTML = greet;
+      </script>
+
+
+    <h2>Using if..else statement to recongnize a username and customise a greeting for the user</h2>
+
+    <h2><i>Example 4</i></h2>
+        
+    <img src="image/statements/else3.PNG" alt="Code Sample"> <br>
+
+    <p id="example4"></p>
+
+    <script>
+
+        // empty username 
+        //  let username = "";
+
+        // define username
+        let username = "Ray";
+
+        //   let defaultName;
+
+        //Using a shorthand
+
+       let defaultName = username || "Not a user";
+
+       if (username) {
+           defaultName = username;
+       } else {
+           defaultName = 'Not a User'
+       }
+        //   document.getElementById('example4').innerHTML = defaultName;
+
+        document.getElementById('example4').innerHTML = "Welcome to dashboard " + defaultName + " !";
+    </script>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="statement_if.html">BACK</a></button>
+        <button class="next-btn"><a href="comparison_operators.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
