@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and Falsy</title>
+</head>
+<body>
+    
+    <h3>CONDITIONAL STATEMENTS</h3>
+
+    <h1>Truthy and Falsy</h1>
+
+    <p>
+        As a developer, there are times you will want to check if a variable exist and if it has been assigned
+        a value and not to necessarily equal a specific value. This will help you know if the datatype is empty, 
+        null or if it has a value. This is very important in development to debug errors in the code and make
+        necessary corrections. <br><br>
+
+        The list of falsy value includes:
+        <li>An empty string " "</li>
+        <li>A variable assigned to a value of 0</li>
+        <li>A variable assigned to null meaning no value  at all</li>
+        <li>Undefined which  represent when a declared variable lacks a value</li>
+        <li>and NaN, or Not a Number, will return a false value when checked against a condition. </li>
+
+        <br><br>
+        <b>See Example below</b>
+    </p>
+
+    <img src="image/statements/comp2.PNG" alt="Code sample"> <br><br>
+
+    <script>
+        let myVariable = 'I Exist!';
+
+        if (myVariable) {
+        console.log(myVariable)
+        } else {
+        console.log('The variable does not exist.')
+        }
+    </script>
+
+    
+     
+    <p><b>Here’s an example with numbers:</b></p>
+
+    <img src="image/statements/comp1.PNG" alt="Code sample"> <br><br>
+
+    <script>
+        let numberOfBags = 0;
+
+        if (numberOfBags){
+        console.log('Take a bag!');
+        } else {
+        console.log('No bag in the inventory!');
+        }
+
+        // Prints 'No bag in the inventory!'
+    </script>
+
+    <h1>Truthy and Falsy Assignment</h1>
+
+    <p>
+        Truthy and falsy evaluations open a world of short-hand possibilities! <br> <br>
+
+        Say you have a website platform and want to use a user’s username to make a personalized greeting as in 
+        in previous lesson and the user does not have an account yet, making the username variable falsy. 
+        The code below checks if username is defined and assigns a default string if it is not:
+    </p>
+
+    <h2><i>Example 1</i></h2> 
+
+    <img src="image/statements/comp3.PNG" alt="Code Sample"> <br>
+    
+    <p id="demo"></p>
+    <script>
+        let username = "";
+        let defaultName;
+
+        if(username){
+            defaultName = username;
+        } else{
+            defaultName = 'Not a User';
+        }
+
+        document.getElementById('demo').innerHTML = defaultName;
+    </script>
+
+    <p>
+        Now, with our knowledge of <i><b>Logical Operation</b></i> we can use a short-hand for the above code. 
+        In a boolean condition, JavaScript assigns the truthy value to a variable if you use the || operator in
+        your assignment: <br><br>
+
+        Because || or statements check the left-hand condition first, the variable defaultName will be assigned 
+        the actual value of username if it is truthy, and it will be assigned the value of 'Stranger' if username
+        is falsy. This concept is also referred to as <i><b>short-circuit evaluation</b></i>.
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/statements/comp4.PNG" alt="code sample"> <br>
+
+    <p id="demo2"></p>
+
+    <script>
+        let username2 = '';
+        let defaultName2 = username || 'Not a User!';
+
+        document.getElementById('demo2').innerHTML = defaultName2;    // Prints: Not a User!
+    </script>
+
+    <p><b><i>Try adding value to the empty variables and see the outcome</i></b></p>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="comparison_operators.html">BACK</a></button>
+        <button class="next-btn"><a href="tenary_operator.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
