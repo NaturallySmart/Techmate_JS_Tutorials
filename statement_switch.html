@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Switch Statement</title>
+</head>
+<body>
+    
+    <h1>The Switch Statement</h1>
+
+    <p>
+        <b>else if</b> statements are a great tool if we need to check multiple conditions. In programming, we 
+        often find ourselves needing to check multiple values and handling each of them differently. <br><br>
+
+        A <b>switch statement</b> provides an alternative syntax that is easier to read and write <br><br>
+
+        The <b>switch statement</b> is used to perform different actions based on different conditions. <br><br>
+
+        The <b>switch statement</b> is used to select one of many code blocks to be executed. <br><br>
+
+        <b>See examples below:</b>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+    <p>This example uses the weekday number to calculate the weekday name:</p>
+
+    <img src="image/statements/switch.PNG" alt="code sample"> <br>
+    <p id="example1"></p>
+
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+        break;
+        case 1:
+            day = "Monday";
+        break;
+        case 2:
+            day = "Tuesday";
+        break;
+        case 3:
+            day = "Wednesday";
+        break;
+        case 4:
+            day = "Thursday";
+        break;
+        case 5:
+            day = "Friday";
+        break;
+        case  6:
+            day = "Saturday";
+        }
+        document.getElementById("example1").innerHTML = "Today is " + day;
+        
+    </script>
+
+    <h1>The Break Keyword</h1>
+    <p>
+        The break keyword tells the computer to exit the block and not execute any more code or check any other
+        cases inside the code block. Note: Without break keywords, the first matching case will run, but so will
+        every subsequent case regardless of whether or not it matches—including the default. This behavior is 
+        different from if/else conditional statements that execute only one block of code. <br><br>
+    </p>
+
+    <h1>The default Keyword</h1>
+
+    <p>        
+        At the end of each switch statement, there is a default statement. If none of the cases are true, then 
+        the code in the default statement will run.
+    </p>
+
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/statements/switch2.PNG" alt="code sample"> <br>
+
+    <p id="example2"></p>
+
+    <script>
+        let text;
+        switch (new Date().getDay()){
+
+                case 6:
+                    text = "Today is saturday, Let's watch football!";
+                break;
+                case 0:
+                    text = "Today is Sunday, let's go to church!";
+                break;
+                default:
+                    text = "We await the weekend!"
+        }
+
+        document.getElementById('example2').innerHTML = text;
+    </script>
+
+<h2>Common Code Blocks</h2>
+<p>
+    Sometimes you will want different switch cases to use the same code. <br><br>
+    In this example below, case 4 and 5 share the same code block, and 0 and 6 share another code block:
+</p>
+
+<h2><i>Example 3</i></h2>
+
+<img src="image/statements/switch3.PNG" alt="code sample"> <br>
+
+<p id="example3"></p>
+
+<script>
+    let say;
+    switch (new Date().getDay()) {
+        default:
+            say = "Which day is it?"
+        break;
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            say = "It's a work day";
+        break;
+
+        case 5:
+        case 6:
+        case 0:
+            say = "It's the Weekend";
+    }
+    document.getElementById('example3').innerHTML = say;
+</script>
+
+
+<h2>Switching Details</h2>
+<p>If multiple cases matches a case value, the first case is selected.</p>
+<p>If no matching cases are found, the program continues to the default label.</p>
+<p>If no default label is found, the program continues to the statement(s) after the switch.</p>
+
+<h2>Strict Comparison</h2>
+<p>Switch cases use <strong>strict</strong> comparison (===).</p>
+<p>The values must be of the same type to match.</p>
+<p>A strict comparison can only be true if the operands are of the same type.</p>
+<p>In this example below, there will be no match for x:</p>
+
+
+<h2><i>Example 4</i></h2>
+
+<img src="image/statements/switch4.PNG" alt="code sample"> <br>
+
+<p id="example4"></p>
+
+<script>
+    let x = "0";
+
+    switch (x) {
+    case 0:
+       x = "Off";
+        break;
+    case 1:
+        x = "On";
+        break;
+    default:
+   x = "No value found";
+    }
+    document.getElementById("example4").innerHTML = x;
+</script>
+
+
+<h2>Example 5</h2>
+
+<img src="image/statements/switch5.PNG" alt="code sample"> <br>
+
+<p id="example5"></p>
+
+<script>
+    let studentPosition = 'fifth place';
+    let prize;
+
+    switch (studentPosition) {
+
+        case 'first place':
+            prize = '$5000 cash prize';
+            break;
+        case 'second place':
+            prize = '$4000 cash prize';
+            break;
+        case 'third place':
+            prize = '$3000 cash prize';
+            break;
+        case 'fourth place':
+            prize = '$2000 cash prize';
+            break;
+        default:
+            prize = 'try harder next time!';
+
+    }
+  
+    document.getElementById('example5').innerHTML = prize;
+</script>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="statement_else_if.html">BACK</a></button>
+        <button class="next-btn"><a href="eigthball_magic_project.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
