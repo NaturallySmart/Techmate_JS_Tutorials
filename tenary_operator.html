@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator</title>
+</head>
+<body>
+    
+    <h1>Ternary Operator</h1>
+
+    <p>
+        In a bid to shorten and simplify our codes, we can use <b>Ternary Operator</b> to shorten our <i>if..else</i>
+        statement. <br><br>
+
+        <b>See Examples below:</b>
+    </p>
+    
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/statements/ternary.PNG" alt="code sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        let hungry = true;
+        if(hungry){
+           document.write("Time to eat") ;
+        } else{
+            document.write("I will eat later");
+        }
+    </script>
+
+    <p>
+        We can use the <b>Ternary Operator</b> to re-write the above code and get the same result. <br><br>
+
+        <b>See Code Sample Below</b>
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/statements/ternary2.PNG" alt="Code sample"> <br>
+
+    <p id="example2"></p>
+
+    <script>
+
+        let hunger = true;
+
+        hungry ? document.write('Time to eat') : document.write('I will eat later');
+    </script>
+
+    <h4>More Examples</h4>
+
+    <img src="image/statements/ternary3.PNG" alt="Code Sample"> <br>
+
+    <h4>Go to console to see the output of the above code sample</h4>
+
+    <script>
+        let tvOn = false;
+
+        tvOn ? console.log('We can watch a movie.') : 
+        console.log('Sorry, we cannot watch a movie now.');
+
+
+        let isNight = true;
+
+        isNight ? console.log('Time to sleep!') : console.log('It is not nigh yet!');
+
+
+        let favoriteSport = 'Football!';
+
+        (favoriteSport === 'Football!') ?
+        console.log('I love Football!') : 
+        console.log("I don't love Football!");
+
+        let myCountry = 'Nigeria'
+
+       !(myCountry == 'Nigeria') ?
+       console.log('I am from Nigeria') : console.log('I am not from Nigeria');
+    </script>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="truthy_falsy.html">BACK</a></button>
+        <button class="next-btn"><a href="statement_else_if.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
