@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else If Statements</title>
+</head>
+<body>
+    <h1>Else If Statements</h1>
+
+    <p>
+        We can add more conditions to our <b>if...else</b> with an <b>else if</b> statement. The else if statement 
+        allows for more than two possible outcomes. You can add as many else if statements as you’d like, to make 
+        more complex conditionals! <br><br>
+
+        The else if statement always comes after the if statement and before the else statement. The <b>else if</b>
+        statement also takes a condition. Let’s take a look at some examples. <br><br>
+
+        The else if statements allow you to have multiple possible outcomes. if/else if/else statements are read 
+        from top to bottom, so the first condition that evaluates to true from the top to bottom is the block that 
+        gets executed.
+    </p>
+
+    <img src="image/statements/ifelse.PNG" alt="Code Sample"> <br>
+
+    <p id="example3"></p>      
+
+    <script>
+       const time = new Date().getHours();
+       let greet;
+    
+       if ( time < 12) {
+           greet = "Good morning User";
+       } else if (time < 16) {
+           greet = "Good afternoon User";
+       } else {
+           greet = "Good evening User";
+       }
+
+       document.getElementById('example3').innerHTML = greet;
+    </script>
+
+    <h4>Let's take a look at another example</h4>
+
+    <h2><i>Example2</i></h2>
+
+    <img src="image/statements/elseif.PNG" alt="code sample"> <br>
+
+    <p id="example2"></p>
+
+    <script>
+        let trafficLight = 'green';
+        let instruction;
+
+        if (trafficLight === 'red') {
+            instruction = "Stop!"
+        } else if (trafficLight === 'yellow') {
+            instruction = "Slow down!";
+        } else if (trafficLight === 'green') {
+            instruction = "You can go now!";
+        } else {
+            instruction = "Can't say what to do";
+        }
+
+        document.getElementById('example2').innerHTML = instruction;
+    </script>
+
+    <h2><i>Example 3</i></h2>
+
+    <img src="image/statements/elseif2.PNG" alt="Code Sample"> <br>
+
+    <p id="demo3"></p>
+
+    <script>
+        let carMake = "Toyota";
+        let say;
+
+        if(carMake === "Honda") {
+            say = "This is a Honda.";
+        } else if (carMake === "benz") {
+            say = "This is a Benz.";
+        } else if (carMake === "ford") {
+            say = "This is a Ford.";
+        } else if (carMake === "Toyota") {
+            say = "This is a Toyota.";
+        } else if (carMake === "Audi") {
+            say = "This is an Audi.";
+        } else{
+            say = "Car make not recognize.";
+        }
+        console.log(say);      
+    </script>
+
+    <h4>Check console for the output</h4>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="tenary_operator.html">BACK</a></button>
+        <button class="next-btn"><a href="statement_switch.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
