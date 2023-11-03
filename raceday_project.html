@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Day</title>
+</head>
+<body>
+    <h1>Race Day</h1>
+
+    <p id="demo"></p>
+
+    <script>
+
+        // Assigning numbers between and 1000 randomly
+        let raceNumber = Math.floor(Math.random() * 1000);
+        let registeredEarly = false;
+        let age = 19;
+       
+        // control flow statement to check whether the runner is an adult AND registered early
+        // if both conditions are true, a race number above 1000 is assigned.
+
+        if (age > 18 && registeredEarly){
+        raceNumber += 1000;
+        }
+
+        if (age > 18 && registeredEarly) {
+
+        // if the age is more than 18 and registered early
+        document.getElementById('demo').innerHTML = `Your race will start by 9:30am <br> race number is: 
+        ${raceNumber}.`;  
+
+        } else if (age > 18 && !registeredEarly) {
+
+            // where age is more than 18 but not (!) registered early
+            document.getElementById('demo').innerHTML = `Your race starts by 11:00am and you race number is: 
+            ${raceNumber}.`;
+
+
+        } else if (age < 18){ 
+
+            // when age is less than 18 regardless of registration time
+            document.getElementById('demo').innerHTML = `Your race starts by 12:30pm,and your race number is:
+            ${raceNumber}.`;
+
+        } else {
+            // when the age is equal to 18 regardless of the registration time
+            document.getElementById('demo').innerHTML = "See the registration desk.";
+        }
+
+    </script>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="eigthball_magic_project.html">BACK</a></button>
+        <button class="next-btn"><a href="function_intro.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
