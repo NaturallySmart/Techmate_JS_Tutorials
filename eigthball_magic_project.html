@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Ball Magic</title>
+</head>
+<body>
+
+  <p id="demo"></p>
+  <p id="demo2"></p>  
+
+
+    <script>
+        
+        // declare a variable userName
+        let userName = "Ray";
+
+        // create a ternary expression with string interpolation
+
+        userName ? console.log(`Hello, ${userName}!`) : console.log('Hello');
+
+        // create a string question using the const keyword
+        let userQuestion = "Will I get the money today?";
+
+        let msg = `${userName} has asked - ${userQuestion}`;
+
+        // console.log(`${userName} has asked - ${userQuestion}`);
+
+        document.getElementById('demo').innerHTML = msg;
+
+        let randomNumber = Math.floor(Math.random() * 8);
+
+        console.log(randomNumber);
+
+        let eightBall = "";
+
+        // let say = `The magic eightBall says, : ${(eightBall)}.`;
+
+
+        switch(randomNumber) {
+        case 0:
+            eightBall = 'It is certain';
+            break;
+
+        case 1:
+            eightBall = 'It is decidedly so';
+            break;
+
+        case 2:
+            eightBall = 'Reply hazy try again';
+            break;
+  
+        case 3:
+            eightBall = 'Cannot predict now';
+            break;
+
+        case 4:
+            eightBall = 'Do not count on it';
+            break;
+
+        case 5:
+            eightBall = 'My sources say no';
+            break;
+
+        case 6:
+            eightBall = 'Outlook not so good';
+        break;
+
+        case 7:
+            eightBall = 'Signs point to yes';
+            break;
+        }
+
+        // console.log(`The magic eightBall says, ${eightBall}.`);
+
+        document.getElementById('demo2').innerHTML = `The magic eightBall says, ${(eightBall)}.`;
+
+    </script>
+
+
+<div class="nav-button">
+    <button class="back-btn"><a href="statement_switch.html">BACK</a></button>
+    <button class="next-btn"><a href="raceday_project.html">NEXT</a></button>          
+</div>
+
+
+</body>
+</html>
