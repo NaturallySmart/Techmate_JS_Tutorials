@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters and Arguments</title>
+</head>
+<body>
+    
+    <h1>Parameters and Arguments</h1>
+
+    <p>
+        In the previous lesson, we were able to declare and call a parameter without using a parameter. However,
+        when coding most times, there is need to pass a parameter to the function. You can see this as a 
+        customisation of your function in the example in the last lesson. <br><br>
+        
+        In JavaScript, parameters are variables that you define inside the parentheses of a function declaration 
+        or expression. They represent values that will be passed into the function when called. A parameter can be 
+        seen as placeholders for the information to be passed when the fuction is called.  You can pass one or more 
+        parameter(s) into a function<br><br>
+
+        <b> 
+            Synthax: <br> <br>
+            <i>
+                function myFunction(parameter1, parameter2, parameter3) { <br>
+                code here; <br>
+                }
+            </i>
+        </b> 
+        <br><br>
+
+        Now let us use a name in the previous example.
+    </p>
+    
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/functions/function4.PNG" alt="Code sample">;
+
+    <p id="example1"></p>
+  
+       <script>
+        function newStudents(name) {
+            document.getElementById('example1').innerHTML = "Welcome to Javascript class " + name + "!";
+            }
+       
+            newStudents('Ray');   // calling the function
+    </script>
+
+    <h1>Default Parameters</h1>
+
+    <p>
+        It is possible to declare a default parameter (placeholder) for a function so that when the function 
+        is called without an argument parameter, or the argument is <i>undefined</i>, the default parameter
+        is used authomatically. <br><br>
+
+        By using a default parameter, we account for situations when an argument isn’t passed into a 
+        function that is expecting an argument. <br><br>
+       
+
+        Default parameters are defined by assigning them values inside parentheses after the required 
+        arguments.<br><br>
+
+        <b>See Example below:</b>
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <p id="example2"></p>
+
+    <script>
+        function greetings(name='No Name'){
+            document.getElementById('example2').innerHTML= 'Hello, '+ name ;
+            }
+            greetings();      // calling the function with no argument
+            greetings('Tech Mates');  // calling the function with one argument
+    </script>
+
+    <h2><i>Exercise</i></h2>
+
+<p>
+    Now that we have learnt how to declare a function and call the function, try this exercise below. <br><br>
+
+    Let's say you run a school where a new student can register online and you will send them a welcome
+    message. Create a functiom for this and the message to send. <br><br>
+
+    Also create a function with a message to send to those yet to pay their school fees using an alert pop up
+    whenever they log into their student portal.
+
+    Now, say 5 new students, just registered in your school, send them the welcome message each. with their names,
+    the different date for their clearance and the different class they will resume in. Also pass a default
+    parameter in the function.
+</p>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="functions.html">BACK</a></button>
+        <button class="next-btn"><a href="function_return.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
