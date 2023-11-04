@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+<body>
+    
+    <h3>FUNCTIONS</h3>
+
+    <h1>Function Declarations</h1>
+
+    <p>
+        To be able to use a function, you must first declare the function. There are several ways to declare
+        a function, and one way to do so is using a <b><i>function declaration</i></b>. A function declaration
+        has the <b>function keyword</b>, a name or identifier binded with the function just as in variables,
+        followed by a parenthesis ( ), then the function body inside a cury brace { }. <br><br>
+
+        <b>syntax:</b>
+
+        <dl>
+            function functionName( ) { <br>
+                // code statements i.e the function body; <br>
+            }
+        </dl>
+    </p>
+
+    <p>
+        We should also be aware of the hoisting feature in JavaScript which allows access to function declarations 
+        before they’re defined. <br><br>
+
+        In the code example below, You will see how <b>hoisting</b> allowed <i>greet( )</i> to be called before 
+        the <i>greet( ) function</i> was defined! However, hoisting is considered not to be a good practice. <br><br>
+
+        <b>See code sample below:</b>
+    </p>
+
+    <img src="image/functions/function.PNG" alt="code sample"> <br>
+
+    <p><b>Below is how o properly declare a function</b></p>
+
+    <img src="image/functions/function2.PNG" alt="code sample"> <br> <br>
+
+    <script>
+        function newSubject() {
+        console.log('I love Javascript');
+            }
+
+        function newStudents() {
+            console.log('Welcome to Javascript class');
+        }
+    </script>
+
+    <h1>Calling a Function</h1>
+
+    <p>
+        In the above code examples, the functions were only declared but not called and as such the code will
+        not run. To make a code in the function body run, the function needs to be called. The function can be
+        called as many times as you want in your work.
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/functions/function3.PNG" alt="code sample"> <br>
+    
+    <p id="example1"></p>
+    <p id="example1.2"></p>
+
+       <script>
+        function newSubject() {
+            document.getElementById('example1').innerHTML = "I love Javascript!";
+        }
+
+        function newStudents() {
+            document.getElementById('example1.2').innerHTML = "Welcome to Javascript class!"
+            }
+            newSubject();  // calling first function
+            newStudents();   // calling second function
+    </script>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="function_intro.html">BACK</a></button>
+        <button class="next-btn"><a href="function_parameters.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
