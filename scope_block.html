@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    
+    <h1>Block Scope</h1>
+
+    <p>
+        We have effectively be using block of codes in our previous lessons. We used this in <b>functions</b> as 
+        we as in our <b>if statement</b> lessons. A block is the code found inside a set of curly braces {}. 
+        Blocks help us group one or more statements together and serve as an important structural marker for 
+        organizing our code. In JavaScript, blocks are used to create scope. <br><br>
+
+
+        A block of code could be a function, like this: <br>
+        <pre>
+            const logSkyColor = () => {
+                let color = 'blue';
+                console.log(color); // blue
+            }
+        </pre>
+
+        In the above, the function body is a <b>block of Code</b>. <br><br>
+        
+        A block of code is also used in the <b><i>if else statement</i></b> below.
+
+        <pre>
+            if (night) {
+                let skyColor = 'Dark blue';
+                console.log('skyColor');
+                }
+        </pre>
+
+        <b>Let's see an example</b>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+ 
+    <img src="image/scope/scope.PNG" alt="code sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        const sport = 'football';
+
+        function favoriteSport() {
+            let matchDays = 'Saturdays';
+
+            return 'I watch ' + sport + ' every weekend on ' + matchDays;
+        }
+
+        document.getElementById("example1").innerHTML = favoriteSport();
+    </script>
+
+    <p>
+        You’ll notice that the <i>favoriteSport()</i> function is able to access both variables without 
+        any problems. In the next lesson we’ll consider why would it be preferable to have one 
+        variable outside of a block and the other inside of a block.
+    </p>
+
+    <script>
+        const city = 'New York City';
+
+        function logCitySkyline() {
+            let skyscraper = 'Empire State Building';
+
+            return 'The stars over the ' + skyscraper + ' in ' + city;
+            }
+
+        console.log(logCitySkyline());
+    </script>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="scope_intro.html">BACK</a></button>
+        <button class="next-btn"><a href="scope_global.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
