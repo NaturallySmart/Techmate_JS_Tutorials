@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Expressions</title>
+</head>
+<body>
+
+    <h1>Function Expressions</h1>
+
+    <p>
+        Another way to define a function is to use a <b><i>function expression</i></b>. To define a function 
+        inside an expression, we can use the <i>function</i> keyword. In a function expression, the function 
+        name is usually omitted. A function with no name is called an anonymous function. A function expression 
+        is often stored in a variable in order to refer to it. <br><br>
+
+        To declare a function expression:
+
+        <ol>
+            <li>
+                Declare a variable to make the variable’s name be the name, or identifier, of your function.
+                Since the release of ES6, it is common practice to use const as the keyword to declare the 
+                variable that will hold our function.
+            </li>
+            <li>
+                Assign as that variable’s value an anonymous function created by using the function keyword 
+                followed by a set of parentheses with possible parameters. Then a set of curly braces that 
+                contain the function body.
+            </li>
+        </ol>
+        <br>
+        <b>Syntax:</b>
+        <pre>
+            const myFunc = function (param1, param2) {
+                // Function Body...
+            };
+        </pre>
+
+        To invoke a function expression, write the name of the variable in which the function is stored 
+        followed by parentheses enclosing any arguments being passed into the function.
+        <br><br>
+        Example:
+        <pre>
+            let result = myFunc(arg1, arg2);  // myFunc is the variable name
+        </pre>
+
+        Unlike function declarations, function expressions are not hoisted so they cannot be called before 
+        they are defined.
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <p>
+        Let's say you watch football every saturday, let's create a function expression to check the day of
+        the week so we can know if we are watching football today.
+    </p>
+
+    <p id="example1"></p>
+
+    <img src="image/functions/function7.PNG" alt="code sample"> <br>
+
+    <script>
+        const watchFootball = function(day) { // variable created and assigned an anonymous function of day
+            if (day === 'Saturday') {
+                return true;  // a conditional statement to return true if the day is Saturday
+            } else {
+                return false; // a conditional statement to return false if the day is not Saturday
+            }
+
+            watchFootball('Monday'); //assigns a day to the variable
+        }
+
+        document.getElementById('example1').innerHTML =  watchFootball('Monday');
+    </script>
+
+    <h1>Arrow Functions</h1>
+    <p>
+        Arrow functions or short-hand syntax for JavaScript functions were introduced with ECMAScript 6.
+        They have shorter syntax compared to regular functions and uses the special <b>“fat arrow” () => notation.</b>
+        <br><br>
+
+        Arrow functions remove the need to type out the keyword function every time you need to create a function. 
+        Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the 
+        function body surrounded in { } like the sample below: <br><br>
+    </p>
+
+    <img src="image/functions/arrowfunction.PNG" alt="code sample"> <br>
+
+    <script>
+        const landSize = (width, lenght) => {
+            let area = width * lenght;
+            return area;
+        };
+    </script>
+
+    <p>
+        It is important to be familiar with the multiple ways of writing functions because you will come 
+        across each of these when reading other JavaScript code.
+    </p>
+
+
+
+    <h1>Concise Body Arrow Functions</h1>
+    <p>
+        JavaScript also provides several ways to refactor arrow function syntax. The most condensed 
+        form of the function is known as concise body. We’ll explore a few of these techniques below: <br><br>
+
+        <ol>
+            <li>
+                Functions that take only a single parameter do not need that parameter to be enclosed 
+                in parentheses. However, if a function takes zero or multiple parameters, parentheses 
+                are required.
+
+                <pre>
+                    <b>Zero Parameter</b>
+                    const functionName = ( ) => {};
+                </pre>
+                <pre>
+                    <b>One Parameter</b>
+                    const functionName = Parameter1 => {};
+                </pre>
+                <pre>
+                    <b>Two or More Parameters</b>
+                    const functionName = (Parameter1, Parameter2) => {};
+                </pre>
+            </li>
+            <li>
+                A function body composed of a single-line block does not need curly braces. Without the 
+                curly braces, whatever that line evaluates will be automatically returned. The contents 
+                of the block should immediately follow the arrow => and the return keyword can be removed. 
+                This is referred to as <b><i>implicit return</i></b>.
+
+                <pre>
+                    <b>Single-Line Block //Implicit Return</b>
+                    const addNumbers = num1 => num1 + num2;                    
+                </pre>
+                <pre>
+                    <b>Multiple Line Block //Explicit Return</b>
+                    const multiplyNumbers = (num1, num2) => {
+                        const result = num1 * num2;
+                        return result;
+                        };
+                </pre>
+            </li>
+        </ol>
+        <b>See Example below</b> <br>
+
+        <img src="image/functions/arrowfunction2.PNG" alt="code sample"> <br>
+    </p>
+
+    <script>
+        const squareNumber = (Number) => {
+            return Number * Number;
+        };
+    </script>
+
+    <p>The above code can be refactor as below</p>
+
+    <img src="image/functions/arrowfunction3.PNG" alt="code sample"> <br>
+
+    <script>
+        const squareNumb = Number => Number * Number;
+    </script>
+
+    <h2><i>Exercise 1</i></h2>
+    <p>
+        Refactor the code in our example 1 to a <b>concise body</b> arrow function of a single line.<br><br>
+
+        <b><i>Hint: Use ternary operator.</i></b> 
+    </p>
+
+    <script>
+        const plantNeedsWater = day => day === 'Wednesday' ? true : false; // ternary operator used
+    </script>
+
+    <h2><i>Exercise 2</i></h2>
+
+    <p>
+        Repeat the above example, but this time around use the <b>Date Keyword</b> to automatically get 
+        the current date when calling the function. Then pass that value as an argument to your function.
+        <br>
+
+        Then if the day is saturday, let the output be, "We are watching football today", if not, let
+        the out be, "No football today".
+    </p>
+
+    <div class="exercise-container">
+        <input type="text" id="dateValue" readonly>
+        <button onclick="getDay()">Get Day</button>
+        <span id="result"></span>
+    </div>
+    <script>
+        const footballDay = function(day) {
+            if (day === 'Saturday') {
+                return "We are watching football today";
+                } else {
+                    return "No football today";
+                    }
+                    };
+                    function getDay(){
+                        var d=new Date();
+                        var n=d.toLocaleString("en-US",{weekday: 'long'});
+                        document.getElementById('dateValue').value = n;
+                        document.getElementById('result').innerText = footballDay(n);
+                        }
+    </script>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="function_return.html">BACK</a></button>
+        <button class="next-btn"><a href="scope_intro.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
