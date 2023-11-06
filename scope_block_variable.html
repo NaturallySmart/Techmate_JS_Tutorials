@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    <h1>Block Scope</h1>
+
+    <p>
+        When a variable is defined inside a block, it is only accessible to the code within the 
+        curly braces {}. We say that variable has block scope because it is only accessible to 
+        the lines of code within that block. <br><br>
+
+        Variables that are declared with block scope are known as local variables because they 
+        are only available to the code that is part of the same block. <br><br>
+
+        Block scope works like this:
+
+        <pre>
+            const logShirtColor = () => {
+                let color = 'blue'; 
+                console.log(color); // Prints "blue"
+            };
+
+            logShirtColor(); // Prints "blue"
+
+            console.log(color); // throws a ReferenceError
+        </pre>
+
+        In the above illustration;
+
+        <ul>
+            <li>We define a function <b>logShirtColor()</b>.</li>
+            <li>
+                Within the function, the color variable is only available within the curly braces of the function.
+            </li>
+            <li>If we try to log the same variable outside the function, it throws a ReferenceError.</li>
+        </ul>
+
+        <b>See example below</b>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/scope/scope3.PNG" alt="code sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        function favoriteSport() {
+            const sport = "Football";
+
+           // document.getElementById("example1").innerHTML = sport; ;
+
+            document.getElementById("example1").innerHTML +=`My favorite sport is ${sport}!`;
+        }
+        favoriteSport();
+    </script>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="scope_global.html">BACK</a></button>
+        <button class="next-btn"><a href="scope_pollution.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
