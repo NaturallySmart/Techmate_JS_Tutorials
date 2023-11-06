@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Pollution</title>
+</head>
+<body>
+    
+    <h1>Scope Pollution</h1>
+
+    <p>
+        It may seem like a great idea to always make your variables accessible, but having too many 
+        global variables can cause problems in a program. <br><br>
+
+        When you declare global variables, they go to the global namespace. The global namespace 
+        allows the variables to be accessible from anywhere in the program. These variables remain 
+        there until the program finishes which means our global namespace can fill up really 
+        quickly and it becomes difficult to keep track of what variable is where. This can lead
+        to bugs that are hard to find because we don't know where something came from. <br><br>
+
+        Scope pollution is a problem in JavaScript where variables that are declared inside of 
+        functions have the same scope as global variables. This can lead to
+        unexpected behavior if not handled properly. <br><br>
+
+        Scope pollution makes it difficult to keep track of our different variables and sets us 
+        up for potential accidents. For example, globally scoped variables can collide with other 
+        variables that are more locally scoped, causing unexpected behavior in our code.
+
+        <pre>
+            // Global Variable
+            let x = "I am global";
+            function myFunction() {
+                let x = "I am local";
+                console.log(x); // Output: I am local
+                }
+                myFunction();
+                console.log(x); // Output: I am global                
+        </pre>
+
+        In the example above, you will notice the following:
+
+        <ul>
+            <li>
+                We have two variables named 'x'. One is global (outside any function) and one is 
+                local (inside the function).
+            </li>
+            <li>
+                Inside the function, when we log `console.log(x)`, it logs `"I am local"` instead of
+                `"I am global"`. This demonstrates how scope works.
+            </li>
+            <li>
+                Outside the function, logging `console.log(x)` logs `"I am global"`, showing that even
+                though there was a local variable called 'x', the global variable was used.
+            </li>
+        </ul>
+
+        <i><b>NOTE:</b>While it’s important to know what global scope is, it’s best practice to not 
+            define variables in the global scope.
+        </i>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/scope/scope4.PNG" alt="code sample"> <br>
+
+    <p>The above will give the error below in the console due to the scope pollution.</p>
+
+    <img src="image/scope/scope5.PNG" alt="code sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        const text = 'Goodday';
+        const user = 'Ray';
+        const platform = 'TechMate Tutorials';
+        const subjects = "javaScript and React";
+
+        function welcomeMessage() {
+            subjects = "Python and MongoDB";
+
+            return text + ' ' + user + ', ' + ' welcome to ' + platform + ' where you can learn ' + subjects;
+        }
+        document.getElementById('example1').innerHTML = welcomeMessage();
+
+        document.getElementById('example1').innerHTML = subjects;
+    </script>
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="scope_block_variable.html">BACK</a></button>
+        <button class="next-btn"><a href="scope_goodpractice.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
