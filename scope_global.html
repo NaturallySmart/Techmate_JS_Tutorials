@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Scope</title>
+</head>
+<body>
+    
+    <h1>Global Scope</h1>
+
+    <p>
+        In <b><i>global scope</i></b>, variables are declared outside of blocks. These variables are called 
+        global variables. Because global variables are not bound inside a block, they can be accessed by any 
+        code in the program, including code in blocks. <br><br>
+
+        Let’s take a look at an example of global scope:
+
+        <pre>
+            const color = 'blue';
+            const returnSkyColor = () => {
+                return color; // blue 
+                };
+            console.log(returnSkyColor); // blue
+        </pre>
+
+        In the above code illustration, you will notice that even though the <b>color</b> variable
+        is defined outside of the block, it can still be accessed within the function block because
+        it has been declared globally. In turn, color can be accessed within the returnSkyColor function block.
+        <br><br>
+
+        <b>Let’s see an example</b>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/scope/scope2.PNG" alt="code sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        const text = 'Goodday';
+        const user = 'Ray';
+        const platform = 'TechMate Tutorials';
+        const subjects = "javaScript and React";
+
+        function welcomeMessage() {
+            return text + ' ' + user + ', ' + ' welcome to ' + platform + ' where you can learn ' + subjects;
+        }
+        document.getElementById('example1').innerHTML = welcomeMessage();
+    </script>
+
+    <script>
+        const satellite = 'The Moon';
+        const galaxy = 'The Milky Way';
+        const stars = 'North Star';
+
+        function callMyNightSky() {
+        return 'Night Sky: ' + satellite + ', ' +
+        stars + ', and ' + galaxy;
+        }
+
+        console.log(callMyNightSky());
+    </script>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="scope_block.html">BACK</a></button>
+        <button class="next-btn"><a href="scope_block_variable.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
