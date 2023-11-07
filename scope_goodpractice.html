@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Good Scoping</title>
+</head>
+<body>
+    
+    <h1>Practice Good Scoping</h1>
+
+    <p>
+        In programming, practicing good scoping is a key concept to avoid variable conflicts and unexpected 
+        behavior in your code. <br><br>
+
+        This will greatly improve your code in several ways:
+
+        <li>
+            It will make your code more legible since the blocks will organize your code into discrete sections.
+        </li>
+        <li>
+            It makes your code more understandable since it clarifies which variables are associated with 
+            different parts of the program rather than having to keep track of them line after line!
+        </li>
+        <li>
+            It’s easier to maintain your code, since your code will be modular.
+        </li>
+        <li>
+            It will save memory in your code because it will cease to exist after the block finishes running.
+        </li>
+        <li>
+            It helps you keep track of the variables that are available within each function or block of code.
+        </li>
+
+        <pre>
+            const logSkyColor = () => {
+                const dusk = true;
+                let color = 'blue'; 
+                if (dusk) {
+                    let color = 'pink';
+                    console.log(color); // prints pink
+                    } 
+                    console.log(color); // Prints "blue"
+                    };
+
+            console.log(color); // throws a ReferenceError                   
+        </pre>
+
+        In the above illustration, you will notice the following:
+
+        <li>
+            We create a variable color inside the <b><i>logSkyColor()</i></b> function.
+        </li>
+        <li>
+            After the if statement, we define a new code block with the {} braces. Here 
+            we assign a new value to the variable color if the if statement is truthy.
+        </li>
+        <li>
+            Within the if block, the color variable holds the value 'pink', though outside 
+            the if block, in the function body, the color variable holds the value 'blue'.
+        </li>
+        <li>
+            On the last line, we attempt to print the value of color outside both the if 
+            statement and the definition of logSkyColor(). This will throw a ReferenceError 
+            since color only exists within the scope of those two blocks — it is never 
+            defined in the global scope.
+        </li>
+        <li>
+            While we use block scope, we still pollute our namespace by reusing the same 
+            variable name twice. A better practice would be to rename the variable inside 
+            the block.
+        </li> <br><br>
+
+        Block scope is a powerful tool in JavaScript, since it allows us to define variables 
+        with precision, and not pollute the global namespace. If a variable does not need to 
+        exist outside a block— it shouldn’t!
+    </p>
+    
+    
+    <div class="nav-button">
+        <button class="back-btn"><a href="scope_pollution.html">BACK</a></button>
+        <button class="next-btn"><a href="arrays.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
