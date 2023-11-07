@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Creating Arrays</title>
+</head>
+<body>
+    
+    <h1>Creating an Array</h1>
+
+    <p>
+        One way we can create an array is to use an array literal. An array literal creates an 
+        array by wrapping items in square brackets [ ]. Remember from the previous exercise, 
+        arrays can store any data type — we can have an array that holds all the same data 
+        types or an array that holds different data types. <br>
+
+        <pre>
+            let myMixedArray = ["apple", 10, true];
+        </pre>
+
+        Let’s take a closer look at the syntax in the above array example:
+
+        <ul>
+            <li>The array is stored in a variable called <b><i>myMixedArray</i></b></li>
+            <li>The array is represented by the square brackets [ ] and the content inside.</li>
+            <li>Each content item inside an array is called an element.</li>
+            <li>There are three different elements inside the array.</li>
+            <li>Each element inside the array is a different data type, which are: string, number and a boolean</li>       
+        </ul>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/Arrays/array.PNG" alt="code sample"> <br>
+
+    <p id="example1"></p>
+
+    <script>
+        const myTechSkills = ['JavaScript', ' React', ' PHP'];
+
+        document.getElementById('example1').innerHTML = myTechSkills;
+    </script>
+
+
+    <h1>Accessing Elements</h1>
+
+    <p>
+        Accessing elements of an array means retrieving specific values from our array. We do 
+        this using the index. Index tell us where exactly in the array the element is located.
+        It's just like in your shopping list, you have items listed out with number from one to
+        the last number on the list. However, numbering in JavaScript starts from <b>Zero (0)</b>. <br><br>
+        
+        In our above example, JavaScript takes the 0 position, React takes the 1 Position while
+        PHP takes the 2 position. We can then call an element using the index position. <br><br>
+
+        <b>See Example Below:</b>
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/Arrays/array2.PNG" alt="Code sample"> 
+
+    <p id="example2"></p>
+
+    <script>
+        const techStack = ['JavaScript', 'React', 'PHP', 'NodeJS', 'VueJS'];
+
+        document.getElementById('example2').innerHTML = techStack[0];
+
+        //Change [0] to another number and see
+    </script>
+    
+
+    <div class="note">
+        <i>
+            <b>Note:</b> <br>
+            When you try to access an index that is beyond the last element, you
+            will get an <b>undefine</b> error message because there is no element in that index.
+        </i>
+    </div>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="arrays.html">BACK</a></button>
+        <button class="next-btn"><a href="array_updating.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
