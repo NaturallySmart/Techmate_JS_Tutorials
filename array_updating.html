@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Updating Elements In an Array</title>
+</head>
+<body>
+    
+    <h1>Updating Elements In an Array</h1>
+
+    <p>
+        We have learnt how we can access an element in an array using it's index.
+        We can also update an element in an array using the index of that element. <br><br>
+
+        Now let's say you have a list of groceries that you need to purchase in an array,
+        and after a while, you decided to change one of the items to another one, how do 
+        you do that in array? Let’s see that.
+
+        <pre>
+            const fruits = ["apple", "banana", "orange", "Mango"];
+                //let's say you want to replace banana with grapes
+                    fruits[1] = "grapes";
+                        console.log(fruits);
+            outputs: // ["apple", "grapes", "orange", "Mango"]
+        </pre>
+
+        In the above example, we have an array <b>fruits</b> which contains four elements.
+        We decided to change banana to grapes by changing the element in index 1 to grapes.
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/Arrays/array3.PNG" alt="code sample">
+
+    <p id="example1"></p>
+
+    <script>
+        const fruits = ["apple", "banana", "orange", "Mango"];
+        fruits[1] = "grapes";
+        document.getElementById("example1").innerHTML = fruits;
+    </script>
+
+
+    <h1>Arrays with let and const</h1>
+
+    <p>
+        Previously, you must have learnt that variables can be declared using keywords
+        such as <b>const</b> and <b>let</b>, and that variables declared with <b>const</b>
+        cannot be redeclared but those declared with <b>let</b> can be redeclared. <br><br>
+
+        However, in array you can can change the content of a <b>const </b>array, but cannot reassign 
+        a new array or a different value. But you can change the content of a <b>let </b>array and also
+        reassign the value. <br><br>
+
+        <b>See example below:</b>
+    </p>
+
+    <h2><i>Example 2</i></h2>
+
+    <img src="image/Arrays/arrays4.PNG" alt="code sample">
+
+    <p>See Output below</p>
+
+    <img src="image/Arrays/arrays5.PNG" alt="console error">
+
+    <script>
+
+        let fruitNames = ['Apple', 'Mango', 'Banana', 'Orange']
+
+        const cars = ['Ford', 'Toyota', 'BMW', 'Audi'];
+
+        fruitNames[0] = 'Grapes';
+
+        console.log(fruitNames); //prints the array and update the index
+
+        fruitNames = ['Grapes']; //reassign fruitNames to Grapes as an array
+        console.log(fruitNames); // prints Grapes
+
+        cars[3] = 'Honda'; 
+
+        console.log(cars); // prints the array nd updates the index of [3]
+
+       cars = ['Honda']; // tried to reassign cars to another array
+        console.log(cars); // throws up an error
+    </script>
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="array_creation.html">BACK</a></button>
+        <button class="next-btn"><a href="array_methods.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
