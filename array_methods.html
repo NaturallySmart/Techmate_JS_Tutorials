@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Array methods</title>
+</head>
+<body>
+    
+    <h1>Array Methods</h1>
+
+    <p>
+        We have various Array methods which are:
+        <li>array length</li>
+        <li>push() method</li>
+        <li>pop() method</li>
+        <li>shift() method</li>
+        <li>unshift() method</li>
+        <li>splice() method</li>
+        <li>slice() method</li>
+        <li>sort() method</li>
+        <li>reverse() method</li>
+        <li>indexOf() method</li>
+        <li>lastIndexOf() method</li>
+        <li>includes() method</li>
+        <li>join() method</li>
+        <li>concat() method</li>
+        <li>filter() method</li>
+        <li>find() method</li>
+        <li>reduce() method</li>       
+    </p>
+    <h1>Array .length property</h1>
+
+    <p>
+        Just as in <b>Strings</b>, arrays also have an in-built properties one of which
+        is the <b>.length</b> property. It returns how many items are in the array. <br><br>
+
+        <b>check below:</b>
+
+        <pre>
+            let arr = [5, 6, 7];
+                console.log(arr.length); // Outputs: 3
+        </pre>
+
+        The above uses numbers, now let's try for strings:
+
+        <pre>
+            let strArr = ["apple", "Sweet banana", "cherry"];
+                console.log(strArr.length); // Outputs: 3
+        </pre>
+    </p>
+
+    <h2><i>Example 1</i></h2>
+
+    <img src="image/Arrays/array6.PNG" alt="code sample">
+
+    <p id="example1"></p>
+
+    <script>
+        const names = ['John', 'Mike', 'Pedro'];
+
+        document.getElementById('example1').innerHTML = names.length;
+    </script>
+
+    <h1>The .push() Method</h1>
+
+    <p>
+        This method is used to add an element to the end of an array. So let's say
+        your array contains 3 elements and you want to add a fourth or more element 
+        to it, you use the <b>.push method</b> to do this. <br><br>
+
+        See example below:
+
+        <pre>
+            let itemNumbers = ['item 0', 'item 1', 'item 2'];
+                itemNumbers.push('item3', 'item4', 'item5');
+
+            console.log(itemNumbers); //Outputs: ['item 0', 'item 1', 'item 2', 
+            'item3', 'item4', 'item5']; 
+        </pre>
+
+        Here is how it works:
+
+        <li>
+            We access the <b>push</b> method by using <b>dot(.)</b> notation, connecting push 
+            to itemNumbers with a period.
+        </li>
+        <li>
+            The <b>push</b> method is called like a function because it is a function, 
+            an in-built function that JavaScript allows us to use right on an array.
+        </li>
+        <li>
+            <b>.push()</b> can take a single argument or multiple arguments separated by commas. 
+            In this case, we’re adding three elements: <b>'item 3' 'item 4' and 'item 5'</b> to 
+            <b>itemNumbers</b>.
+        </li>
+        <li>
+            Notice that <b>.push()</b> changes, or mutates, <b>itemNumbers</b>. You might also 
+            see <b>.push()</b> referred to as a destructive array method since it changes the 
+            initial array.
+        </li>
+
+        See an Example below:
+    </p>
+
+    <h2>Example 2</h2>
+
+    <img src="image/Arrays/arraypush.PNG" alt="code sample">
+
+    <p id="example2"></p>
+
+    <script>
+        const newStudents = ['John', ' Mike', ' Joe'];
+        newStudents.push(' Alice', ' Bob');
+        document.getElementById("example2").innerHTML = newStudents;
+    </script>
+
+
+    <h1>The .pop() Method</h1>
+
+    <p>
+        Array <b>.pop( )</b> method removes the last item in an array.
+
+        <pre>
+            let itemNumbers = ['item 0', 'item 1', 'item 2'];
+                const removed = itemNumbers.pop( );
+
+            console.log(itemNumbers); //Outputs: ['item 0', 'item 1',]; 
+
+            console.log(removed); // Outputs: item 2
+        </pre>
+
+        In the above example, 
+        <li><b>.pop()</b> removed the the last item which is <b>item 2</b></li>
+        <li>
+            <b>.pop()</b> does not take any argument inside it's parenthesis, it simply
+            just removes the last item in the array of <b>itemNumbers</b>.
+        </li>
+        <li>
+            <b>.pop()</b> returns the value of the last element. In the example, we store 
+            the returned value in a variable <b>removed</b> to be used for later.
+        </li>
+        <li>When <b>removed</b> is called, it prints the element in the array that was removed</li>
+        <br><br>
+        Let's see a code sample:
+    </p>
+
+    <img src="image/Arrays/arraypop.PNG" alt="code sample">
+
+    <script>
+        const colors = ['blue', 'red', 'yellow', 'green'];
+
+        colors.pop();
+        document.write(`<br />Removing the last color from the list: ${colors}`);    
+    </script>
+
+    <h2>Array .shift() and .unshift method</h2>
+
+    <p>
+        This works like the <b>.pop()</b> method but removes the first element while the
+        <b>.unshift()</b> method adds elements at the beginning of the array.
+    </p>
+
+
+
+    <div class="nav-button">
+        <button class="back-btn"><a href="array_updating.html">BACK</a></button>
+        <button class="next-btn"><a href="array_moremethods.html">NEXT</a></button>          
+    </div>
+</body>
+</html>
