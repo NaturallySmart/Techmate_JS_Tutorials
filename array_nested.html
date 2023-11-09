@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nested Array</title>
+</head>
+<body>
+    <section class="lesson">
+        <h1>Nested Arrays</h1>
+
+        <p>
+            Arrays are capable of storing other arrays. <b>Nested arrays</b> are arrays 
+            that contains other arrays. <br>
+            <b>See a nested array below:</b>
+
+            <pre>
+                const nestedArr = [['Ray', 2], ['Julia', 'John']];
+            </pre>
+
+            To access the nested arrays we can use bracket notation with the index value, 
+            just like we did to access any other element:
+
+            <pre>
+                const nestedArr = [['Ray', 2], ['Julia', 'John']];
+
+                console.log(nestedArr[1]); // Outputs ['Julia', 'John']
+            </pre>
+
+            Notice that <b>nestedArr[1]</b> will grab the element in <b>index 1</b> which is the 
+            array <b>['Julia', 'John']</b>. Then, if we want to access the elements within the nested 
+            array we can chain, or add on, more bracket notation with index values.
+            
+            <pre>
+                const nestedArr = [['Ray', 2], ['Julia', 'John']];
+                console.log(nestedArr[1][0]); // Outputs 'Julia'
+                console.log(nestedArr[1][1]); // Outputs 'John'
+            </pre>
+
+            In the above example, in the first console.log, <b>[1]</b> was used to access the array
+            in <b>index 1</b> which is <b>['Julia', 'John']</b>, then the <b>[0]</b> was used to
+            access the element in <b>index 0</b> which is <b>'Julia'</b>
+        </p>
+
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/Arrays/nestedarray.PNG" alt="code sample">
+
+        <p id="example1"></p>
+
+        <script>
+            const nestedArr = [['Ray', 2], ['Julia', 'John']];
+            document.getElementById('example1').innerHTML = nestedArr[1][0]; // Outputs 'Julia'
+             
+        </script>
+
+
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="arrays_and_functions.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_intro.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
