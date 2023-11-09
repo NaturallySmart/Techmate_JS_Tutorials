@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Loops</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Loops</h1>
+
+        <p>
+            In programming, it is important that we often write codes that needs to run
+            and output a different result until a specific condition is met. <br><br>
+
+            Take for instance, you are hungry (start point), then you have to eat, and 
+            once you are full (stop condition), you stop eating, if not, you continue 
+            eating till your stomach can't hold any more food. This is called a loop. <br><br>
+
+            A loop is a programming tool that repeats a set of instructions until a specified 
+            condition, called a stopping condition is reached. As a programmer, you’ll find 
+            that you rely on loops all the time! You’ll hear the generic term iterate when 
+            referring to loops; iterate simply means “to repeat”. <br> <br>
+
+            When we need to reuse a task in our code, we often bundle that action in a function. 
+            Similarly, when we see that a process has to repeat multiple times in a row, we write 
+            a loop. Loops allow us to create efficient code that automates processes to make scalable, 
+            manageable programs.
+        </p>
+
+        <h1>Repeating Tasks Manually</h1>
+
+        <p>
+            Before we go into <b>Lopps</b>proper, let's look at why loops is very important and should be
+            appreciated. Without loops, repeating a task by typing all the codes for the task each time 
+            will be very cumbersome.
+
+            <b>See example below</b>
+        </p>
+
+        <h2><i>Example</i></h2>
+
+        <img src="image/loop/loop.PNG" alt="code sample">
+
+
+        <script>
+            const visitCity = ['London', 'Paris', 'Dubai'];
+
+            console.log(visitCity[0]);
+            console.log(visitCity[1]);
+            console.log(visitCity[2]);
+        </script>
+
+        <p>
+            Let's say you have listed out 3 cities you want to visit. You can repeat
+            each cities with just three console.log. Looks easy right? What about if 
+            you have 300 cities, will it still be easy? Here's where loops comes in.
+        </p>  
+
+        <h2>Different Kinds of Loops:</h2>
+
+        <p>
+            JavaScript supports different kinds of loops:
+            <ul>
+                <li><b>for</b> - loops through a block of code a number of times</li>
+                <li><b>for/in</b> - loops through the properties of an object</li>
+                <li><b>for/of</b> - loops through the values of an iterable object</li>
+                <li><b>while</b> - loops through a block of code while a specified condition is true</li>
+                <li><b>do/while</b> - also loops through a block of code while a specified condition is true</li>
+            </ul>
+        </p>      
+
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="loop_intro.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_forloop.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
