@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The For Loop</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>The For Loop</h1>
+
+        <p>
+            Instead of writing out the same code over and over, loops allow us to tell computers 
+            to repeat a given block of code on its own. One way to give computers these instructions 
+            is with a <b>for loop</b>. <br><br>
+
+            The typical for loop includes an <b>iterator variable</b> that usually appears in all three 
+            expressions. The iterator variable is initialized, checked against the stopping condition, 
+            and assigned a new value on each loop iteration. Iterator variables can have any name, 
+            but it’s best practice to use a descriptive variable name. <br><br>
+
+            A <b>for loop</b> contains three expressions separated by a semi-colon (;) inside the parentheses:
+            <ol>
+                <li>
+                    Initialization - This expression sets up the starting point or state of the loop. 
+                    It's executed once before the loop begins and can also be used to declare the 
+                    iterator variable.
+                </li>
+                <li>
+                    Condition - This expression determines whether the loop should continue executing.
+                    If the condition evaluates as true, then the loop continues; if it evaluates to 
+                    false, the loop ends.
+                </li>
+                <li>
+                    an iteration statement is used to update the iterator variable on each loop.
+                </li>
+            </ol>
+
+            <b>The for loop syntax looks like this:</b>
+
+            <pre>
+              
+                for (let counter = 0; counter &lt; 5; counter++) {
+                    console.log(counter);
+                }
+                
+                In the above example, the output will be:
+                    0
+                    1
+                    2
+                    3
+                    4
+            </pre>
+
+            <b>Example explained:</b>
+
+            <ul>
+                <li>
+                    We start by declaring our iterator variable "counter" and setting it equal to zero
+                    <i>(let counter = 0)</i>.
+                </li>
+                <li>
+                    Next we set the condition for when the loop should stop. Our condition checks
+                    if the current value of "counter" is less than five <i>(counter &lt; 5)</i>.
+                </li>
+                <li>
+                    Finally, we increment the value of "counter" by one with each loop iteration
+                    using the post-increment operator ++ <i>(counter++)</i>. The result of the expression
+                    after the semicolon is returned, so in this case, it returns the original value
+                    of "counter".
+                </li>
+                <li>
+                    The code block is inside of the curly braces, console.log(counter), will execute 
+                    until the condition evaluates to false. The condition will be false when counter 
+                    is greater than or equal to 5 — the point that the condition becomes false is 
+                    sometimes called the stop condition.
+                </li>
+            </ul>
+
+            This <b>for loop</b> makes it possible to write 0, 1, 2, and 3 programmatically.
+        </p>
+
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/loop/loop2.PNG" alt="code sample">
+
+        <p id="example1"></p>
+
+        <script>
+            for (let counter = 11; counter < 16; counter++){
+                document.getElementById("example1").innerHTML += "<br>" + counter;
+            }
+        </script>
+      
+
+      <h2>Looping in Reverse</h2>
+      <p>
+            In the above example, the loop runs from 11 to 15. How about if we want it to count
+            backward from 15 down to 11? <br><br>
+
+            To run a backward for loop, we must:
+            <ol>
+                <li>
+                    Set the iterator variable to the highest desired value in the initialization expression.
+                    <i>(let counter = 15)</i>
+                </li>
+                <li>
+                    Specify the condition for ending the loop as an inequality test against the lowest
+                    desired value.
+                    <i>(counter >= 11)</i>
+                </li>
+                <li>
+                    Use a decrement operator -- instead of an increment operator ++.
+                    <i>(--counter)</i>                    
+                </li>
+            </ol>
+            
+            Here's an example:
+        </p>
+
+        <h2><i>Example 2</i></h2>
+
+        <img src="image/loop/loop3.PNG" alt="code sample">
+
+        <p id="example2"></p>
+
+        <script>
+            for(let counter = 15; counter >= 11; counter--) {
+                document.getElementById("example2").innerHTML += '<br>' + counter;
+            }
+        </script>
+
+
+    
+        <div class="note">
+            <h4>Note:</h4>
+            <p>
+                When writing/changing loops, there is a chance that our stopping condition 
+                isn’t met and we get a dreaded infinite loop which essentially stops our 
+                programming from running anything else! To exit out of an infinite loop in 
+                an exercise, refresh the page - then fix the code for your loop.
+            </p>
+        </div>
+
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="loop_intro.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_arrays.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
