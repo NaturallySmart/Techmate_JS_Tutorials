@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Looping through Arrays</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Looping Through Arrays</h1>
+
+        <p>
+            In this lesson we will be learning about looping through arrays in JavaScript and how to 
+            use the for loop statement to iterate over each element of an array. <b>for loops</b> are 
+            very handy for iterating over data structures. <br><br>
+
+            For example, we can use a <b>for loop</b> to perform the same operation on each element 
+            on an array. Arrays hold lists of data, like customer names or product information. <br><br>            
+
+            Imagine we owned a store and wanted to increase the price of every product in our catalog. 
+            That could be a lot of repeating code, but by using a for loop to iterate through the array 
+            we could accomplish this task easily. <br><br>
+
+            To loop through each element in an array, a <b>for loop</b> should use the array’s
+            <b>.length</b> property in its condition. <br><br>
+
+            Check out the example below to see how <b>for loops</b> iterate on arrays:
+
+            <pre>
+                const products = ["Golden Morn", "Chocolate", "Bags of rice"];
+
+                for (let i = 0; i < products.lenght; i++) {
+                    console.log(products[i]); 
+                    // Output: Golden Morn Chocolate Bags of rice
+                }
+            </pre>
+
+            In the loop above, we’ve named our iterator variable <b>i</b>. This is a variable 
+            naming convention you’ll see in a lot of loops. When we use <b>i</b> to iterate 
+            through arrays we can think of it as being short-hand for the word index. Notice 
+            how our stopping condition checks that <b>i</b> is less than <b>products.length</b>. 
+            Remember that arrays are zero-indexed, the index of the last element of an array is 
+            equivalent to the length of that array minus 1. If we tried to access an element at 
+            the index of <b>products.length</b> we will have gone too far! <br><br>
+
+            With <b>for loops</b>, it’s easier for us to work with elements in arrays.
+        </p>
+
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/loop/loop4.PNG" alt="code sample">
+
+        <p id="example1"></p>
+
+        <script>
+            const products = ["Golden Morn", "Chocolate", "Bags of rice"];
+        
+            for (let i = 0; i < products.length; i++) {
+
+                document.getElementById("example1").innerHTML += "<br>" + products[i];
+
+                //document.getElementById("example1").innerHTML += `I just bought ${products[i]} from MetroShop<br> `;
+
+                //document.getElementById("example1").innerHTML += "<br>" + 'I bought ' + products[i] + ' from MetroHub';
+               
+            }
+        </script>
+
+        <h2><i>Exercise</i></h2>
+
+        <p>
+            In the example given, re-write the code to include: <i>I bought <b>PRODUCT</b> from metrohub</i>
+            when printed.
+        </p>  
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="loop_forloop.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_nested.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
