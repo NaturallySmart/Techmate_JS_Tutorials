@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nested Loops</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Nested Loops</h1>
+
+        <p>
+            When we have a loop running inside another loop, we call that a nested loop. 
+            One use for a nested <b>for loop</b> is to compare the elements in two arrays. 
+            For each round of the outer <b>for loop</b>, the inner <b>for loop</b> will run 
+            completely to search if there is any element in it that matches that in the outer
+            array<br><br>
+
+            Let's see an illustration:
+
+            <pre>
+                const myArray = [8, 15, 11];
+                const yourArray = [17, 20, 15];
+                for (let i = 0; i < myArray.length; i++) {
+                    for (let j = 0; j < yourArray.length; j++) {
+                    if (myArray[i] === yourArray[j]) {
+                        console.log('Both arrays have the number: ' + yourArray[j]);
+                        }
+                    }
+                }
+                //Prints: Both arrays have the number: 15
+            </pre>
+
+            <b>illustration explained:</b>
+
+            For each element in the outer loop array, which is <b>myArray</b>, the inner loop 
+            will run in its entirety comparing the current element from the outer array,
+            <b>myArray[i]</b>, to each element in the inner array, which is  <b>yourArray[j]</b>. 
+            When it finds a match, it prints a string to the console.
+        </p>
+
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/loop/loop5.PNG" alt="code sample">
+
+        <p id="example1"></p>
+
+        <script>
+            const myCars = ['Toyota', 'Tesla', 'Lexus', 'Benz'];
+            const yourCars = ['Lexus', 'Audi', 'Toyota'];
+
+            for (let m = 0; m < myCars.length; m++){
+                for (let y = 0; y < yourCars.length; y++ ) {
+                    if(myCars[m] === yourCars[y]){
+
+                    //document.getElementById("example1").innerHTML += myCars[m] + "<br>";
+
+                    document.getElementById("example1").innerHTML += "My car is "+myCars[m]+", and so are you!";
+                    
+                    }
+                }
+            }
+        </script>
+
+        <h2><i>Exercise</i></h2>
+
+        <p>
+            You have a gig with a social media platform and you have been giving 
+            a task to build a prototype for a mutual friends program from two mock
+            users, Brenda and Jason. Brenda has 5 friends, while Jason has 4 friends
+            amongst which two are mutual friends with Brenda. <br><br>
+
+            Use your knowledge of Variables, Arrays, Array methods and loop to carry 
+            out this task and output a statement like the one below.
+        </p>
+
+        <p id="exercise"></p>
+
+        <script>
+            const brendaFriends = ['Kate', 'Bob', 'Joy', 'Mike', 'Tasha'];
+            const jasonFriends = ['Jake', 'Tasha', 'Ray', 'Kate'];
+
+            for (let b = 0; b < brendaFriends.length; b++){
+                for (let j = 0; j < jasonFriends.length; j++ ) {
+                    if(brendaFriends[b] === jasonFriends[j]){
+
+                    //document.getElementById("exercise").innerHTML += brendaFriends[j] + "<br>";
+                    document.getElementById("exercise").innerHTML += "brenda and Jason has "+brendaFriends[b]+", as mutual friends! " + "<br>";
+                   // document.getElementById("exercise").innerHTML += "brenda and Jason has "+brendaFriends[b]+", as mutual friends!";
+                    }
+                }
+            }
+        </script>
+ 
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="loop_arrays.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_while.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
