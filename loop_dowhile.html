@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Do While Loop</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Do...While Statements</h1>
+
+        <p>
+            The <b>do while</b> statement is a control flow structure that allows you to execute 
+            a block of code repeatedly until a specified condition becomes false. It differs 
+            from the <b>while loop</b> in that it executes its first <b>iteration</b> before checking if 
+            the condition is true or not. This means that even when the condition is initially
+            false, the code inside the <b>do while</b> loop will still be executed at least once.
+        </p>
+
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/loop/loopdowhile.PNG" alt="code sample">
+
+        <!-- <p id="example1"></p>
+
+        <script>
+            let numberCount = "";
+            let i = 0;
+
+            do {
+                numberCount = numberCount + i;
+                i++
+        
+            } while(i < 6);
+
+            //console.log('The numbers are: ' +numberCount)
+            document.getElementById("example1").innerHTML = "The numbers are: "+numberCount;          
+        </script> -->
+
+        <h3><i>Output:</i></h3>
+
+        <pre>
+            The numbers are: 012345
+        </pre>
+
+        <p>
+            In this example, the code block makes changes to the <b>numberCount</b> variable 
+            by appending the string form of the <b>i</b> variable to it. First, the code block 
+            after the <b>do</b> keyword is executed once. Then the condition is evaluated. If 
+            the condition evaluates to true, the block will execute again. The looping stops 
+            only when the condition evaluates to false. Here, the condition checks whether
+            the value of <b>i</b> is less than 6. Since <b>i</b> starts as zero and increments 
+            with each iteration, the loop continues executing until <b>i</b> reaches
+            6 (the last iteration). Thus, the output displays all the numbers from 0 to 5. <br><br>
+
+            Note that the <b>while</b> and <b>do...while</b> loop are different! Unlike the 
+            <b>while loop</b>, <b>do...while </b> will run at least once whether or not the 
+            condition evaluates to true.
+
+            <b>See more examples below:</b>
+        </p>
+
+        <h2><i>Example 2</i></h2>
+
+        <img src="image/loop/dowhileloop.PNG" alt="code sample">
+
+        <!-- <p id="example2"></p>
+        <script>
+            let fruitList = ["apple", "banana", "cherry"];
+            let j = 0;
+            
+            do{
+               // console.log(`${fruitList[j]}`);
+               //document.write(`${fruitList[j]} `)
+               document.getElementById("example2").innerHTML +=  `${fruitList[j]} `;
+                j++;
+                
+            }while (j <= 2)
+        </script> -->
+
+
+        <h3><i>Output:</i></h3>
+
+        <pre>
+            apple  banana cherry
+        </pre>
+
+        <h2><i>Example 3</i></h2>
+
+        <img src="image/loop/loop6.PNG" alt="code sample">
+
+        <!-- <p id="example3"></p>
+        <p id="example3.1"></p>
+
+        <script>
+            // Write your code below
+            const msgOne = 'This will print!';
+            const msgTwo = 'This will not print!'; 
+
+            // A do while with a stopping condition that evaluates to false
+            do {
+                    document.getElementById('example3').innerHTML = msgOne;
+                } while (true === false);
+
+            // A while loop with a stopping condition that evaluates to false
+            while (true === false){
+            console.log(msgTwo)
+            document.getElementById('example3.1').innerHTML = msgTwo;
+            };
+        </script> -->
+
+        <h3>Output:</h3>
+        <pre>
+            This will print!
+        </pre>
+
+       
+        <div class="note">
+            <p>
+                Note: To exit out of an infinite loop in an exercise, refresh the page - then 
+                fix the code for your loop(s).
+            </p>
+        </div>
+
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="loop_while.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_break.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
