@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The While Loop</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>The While Loop</h1>
+
+        <p>
+            The <b>while loop</b> loops through a block of code as long as a specified condition is true. <br><br>
+
+            <pre>
+                <b>Syntax:</b>
+                declare the variable;
+                while (condition) {
+                    // code block to be executed
+                }
+            </pre>
+        </p>
+
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/loop/whileloop.PNG" alt="code sample">
+
+        <!-- <p id="example1"></p> -->
+
+        <!-- <script>
+            let counter = 1;
+
+            while (counter < 11) {
+                document.getElementById('example1').innerHTML += counter + ", ";
+                counter++;
+                
+            }
+        </script> -->
+
+        <h3>Output of Example 1:</h3>
+
+        <pre>
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+        </pre>
+
+        In the above example,
+
+        <li>
+            The <b>counter variable</b> is declared before the loop. We can access it inside our 
+            while loop since it’s in the global scope.
+        </li>
+        
+        <li>
+            We start our loop with the keyword <b>while</b> followed by our stopping condition, 
+            or test condition. This will be evaluated before each round of the loop. While the 
+            condition evaluates to <i>true</i>, the block will continue to run. Once it evaluates to 
+            <i>false</i> the loop will stop.
+        </li>
+        <li>
+            Next, we have our loop’s code block which prints <b>counter</b> to the console and increments 
+            counter.
+        </li> <br><br>
+
+        <div class="note">
+            <p>
+                If we didn’t include the increment <b>counter</b> inside our block, <b>counter</b> would 
+                always have its initial value as 1. That would mean the testing condition <b>counter < 11</b> 
+                would always evaluate to true and our loop would never stop running! Remember, this is 
+                called an infinite loop and it’s something we always want to avoid. Infinite loops can 
+                take up all of your computer’s processing power potentially freezing your computer
+                and crashing it.
+            </p>
+        </div> <br>
+
+        <h3>When to use while loop</h3>
+        <p>
+            The syntax of a <b>while loop</b> is ideal when we don’t know in advance how many times 
+            the loop should run. Think of eating like a <b>while loop</b>: when you start taking bites, 
+            you don’t know the exact number you’ll need to become full. Rather you’ll eat while you’re 
+            hungry. In situations when we want a loop to execute an undetermined number of times, 
+            <b>while loops</b> are the best choice.
+        </p>        
+
+        <h2><i>Example 2</i></h2>
+
+        <img src="image/loop/whileloop2.PNG" alt="code sample">
+
+        <!-- <p id="example2"></p>
+
+        <script>
+            let i = 6;
+            while(i > 0){
+                document.getElementById("example2").innerHTML += "Looping... ";
+                i--;
+                }
+        </script> -->
+
+        <h3>Output of Example 2:</h3>
+        <p>
+            <pre>
+                Looping... Looping... Looping... Looping... Looping...
+            </pre>
+        </p>
+        
+        <!-- <h2><i>Example 3</i></h2>
+        <p id="example3"></p>
+
+            <script>
+                let j = 6;
+                while(j >= 0){
+                    document.getElementById("example3").innerHTML += `${j} `;
+                    j--;
+                }
+            </script>
+            <h3>Output of Example 3:</h3>
+        <p>
+            <pre>
+                6 5 4 3 2 1 0 
+            </pre>
+        </p> -->
+
+
+        <h2><i>Exercise:</i></h2>
+
+        <p>
+            <ol>
+                <li>
+                    Create an array of name of four friends named Ben, namely: Joe, Kate and Brenda.
+                </li>
+                <li>
+                    Create a variable named <b>rayFriends</b> using the <i>let</i> keyword and leave it 
+                    unassigned.
+                </li>
+                <li>
+                    Create a <b>while loop</b> with a condition that checks if <b>rayFriends</b> does 
+                    not have a friend named 'Kate'.
+                </li>
+                <li>
+                    Inside the block of your while loop, add the following line of code: <br>
+                    <pre>   rayFriends = Ben[Math.floor(Math.random()</pre>
+
+                    Math.floor(Math.random() * 4) will give us a random number from 0 to 3. 
+                    We’ll use this number to index the cards array, and assign the value of 
+                    <b>rayFriends</b> to a random element from that array.
+                </li>
+
+                <li>Output the result with a button in a function</li>
+
+                <div>
+                    <button onclick="myFunction()" class="btn btn-primary">Run Code!</button>
+                </div>
+
+                <p id="exercise"></p>
+                <script>
+                    function myFunction(){
+                        // create array of names
+                        const ben = ['Ben', 'Joe', 'Kate', 'Brenda'];
+                        // create variable called rayFriends
+                        let rayFriends;
+                        // while loop until rayFriend is not equal to kate
+                        while (rayFriends !== "Kate") {
+                            // set rayFriend as a random card in the deck
+                            rayFriends = ben[Math.floor(Math.random()*4)];
+
+                        //document.getElementById("exercise").innerHTML= rayFriends;
+                        }
+                        document.getElementById("exercise").innerHTML= `The randomly selected friend is ${rayFriends}`;
+                    
+                      // console.log("The randomly selected friend is: ", rayFriends);
+
+                        //document.getElementById('exercise').innerHTML 
+                    };
+                </script>
+            </ol>
+        </p>
+
+       <!-- substitute the above assignment into this and check the result -->
+
+        <script>
+            const cards = ['diamond', 'spade', 'heart', 'club'];
+
+            // Write your code below
+            let currentCard;
+
+            while (currentCard !== 'spade') {
+            currentCard = cards[Math.floor(Math.random() * 4)];
+	        console.log(currentCard);
+            }
+        </script>
+
+
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="loop_nested.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_dowhile.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
