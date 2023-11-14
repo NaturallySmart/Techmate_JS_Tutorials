@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The break Keyword</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>The break Keyword</h1>
+
+        <p>
+            The <b>"break"</b> keyword is used in a loop (for or while) to exit the loop prematurely 
+            when a certain condition is met. It stops executing the remaining code inside the loop and
+            transfers control back to the statement following the loop. This is useful for breaking out 
+            of nested loops if a specific condition has been reached.
+        </p>
+        <pre>
+            <code>
+                // Example: Break Out Of A Loop
+                let i = 5;
+                while(i > 0){
+                    console.log("Looping...");
+                    // If i equals 3, we will break out of the loop
+                    if(i == 3){
+                break;
+                        }
+                        i--;
+                }
+                console.log("Exited Loop!");
+            </code>
+        </pre>
+        <p>
+            In this example, the "break" keyword is used within an if statement that checks whether 
+            the value of 'i' is equal to 3. When it does, the program breaks out of the loop by skipping 
+            over any further iterations. As a result, only three times "Looping..." would be printed 
+            before "Exited Loop!" was displayed.
+        </p>
+        
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/loop/loop7.PNG" alt="code sample">
+
+        <!-- <p id="example1"></p>
+
+        <script>
+            let output = "";
+            
+            for(let i = 0; i <= 9; i++){
+                if(i === 4){
+                    break;
+                } else {
+                    output += `${i} `;
+                    }
+            }
+            document.getElementById('example1').innerHTML = output;
+        </script> -->
+
+        <h3>Output:</h3>
+
+        <pre>       0 1 2 3     </pre>
+
+        <h2><i>Example 2</i></h2>
+
+        <img src="image/loop/loop8.PNG" alt="code sample">
+
+        <!-- <p id="example2"></p>
+
+        <script>
+                // Example: Break Out Of A Loop
+                let i = 5;
+                while(i > 0){
+                    //console.log("Looping...");
+                    document.getElementById('example2').innerHTML += 'Looping ';
+                    // If i equals 3, we will break out of the loop
+                    if(i == 3){
+                break;
+                        }
+                        i--;
+                }
+                //console.log("Exited Loop!");
+
+                document.getElementById('example2').innerHTML += "Exited Loop!";
+        </script> -->
+
+        <h2>Output:</h2>
+        <pre>           Looping Looping Looping Exited Loop!</pre>
+
+        <h2><i>Example 3</i></h2>
+
+        <img src="image/loop/loop9.PNG" alt="code sample">
+
+        <h3>Output:</h3>
+
+        <p id="example3"></p>
+
+        <script>
+            for (let i = 0; i < 99; i++) {
+                if (i > 2 ) {
+                break;
+            }
+                //console.log('Toyota.');
+                document.getElementById('example3').innerHTML += "Toyota. <br>" ;
+            }
+
+            //console.log('Honda you glad I broke out the loop!');
+            document.getElementById('example3').innerHTML += "Honda, I just left the Loop!";
+        </script>
+         
+         <h2>Exercise 1</h2>
+
+         <p>
+            Write a program that prints all numbers from 1 to 10 using a For-Loop and then 
+            prints the number 10 again.  
+         </p>
+
+         <h3>Output:</h3>
+
+        <p id="ex1"></p> 
+        
+        <script>
+            for (let i = 1; i <= 10; i++){
+                console.log(i);
+                document.getElementById('ex1').innerHTML += `${i} `;
+            }
+            document.getElementById('ex1').innerHTML += `<br>` + '10';
+        </script>    
+        
+         <h2>Exercise 2</h2>
+
+         <ol>
+            <li>
+                Create an array of 6 cities namely: London, Lagos, New York, Abuja, California and Pretoria.
+                Use a <b>For-Loop</b> with an iterator to print each city in the array one by one.
+            </li>
+            <li>
+                Break out of the loop when it gets the array index of 'Abuja' and print 
+                "Nigeria's Capital city"
+            </li>
+        </ol>
+
+        <h3>Output:</h3>
+    
+        <p id="exercise2"></p>
+
+        <script>
+            const city = ["London", "Lagos", "New York", "Abuja", "California", "Pretoria"];
+
+            for (let i = 0; i < city.length; i++){
+                //console.log(city[i]);
+                document.getElementById('exercise2').innerHTML += city[i] + "<br>";
+
+                if (city[i] === 'Abuja'){
+                break;
+                }
+            }
+           // console.log("And if you don't know, now you know.");
+            document.getElementById('exercise2').innerHTML += "Nigeria's Capital city";
+        </script>
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="loop_dowhile.html">BACK</a></button>
+            <button class="next-btn"><a href="loop_break.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
