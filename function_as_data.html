@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HIGHER-ORDER FUNCTIONS</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h3>HIGHER-ORDER FUNCTIONS</h3>
+
+        <h1>Functions as Data</h1>
+
+        <p>
+            We may be faced with some seemly annoying long function names that may make 
+            our code harder to read and understand. To solve this problem we can use higher 
+            order functions in JavaScript. <br><br>
+
+            See Example below:
+
+            <pre>
+                const announceThatIAmDoingImportantWork = ( ) => {
+                    console.log( "I am doing some important work!" );
+                }
+            </pre>
+
+            Imagine that we have to use the above function several times in our code, it may 
+            become frustrating because the function name is too long. So what do we do? We can 
+            create a variable that holds the function so instead of writing the whole function
+            every time we just need to call the variable! <br><br>
+
+            So we can rename the function without losing the source code and re-assign the function 
+            to a variable with a shorter name.
+
+            <pre>
+                    const busy = announceThatIAmDoingImportantWork;
+
+                    busy();
+            </pre>
+
+            <b>busy</b> is a variable that holds a reference to our original function. If we could look 
+            up the address in memory of busy and the address in memory of <b>announceThatIAmDoingImportantWork</b> 
+            they would point to the same place. Our new <b>busy()</b> function can be invoked with parentheses 
+            as if that was the name we originally gave our function. <br><br>
+
+            Notice how we assign <b>announceThatIAmDoingImportantWork</b> without parentheses as the value to 
+            the busy variable. We want to assign the value of the function itself, not the value it returns
+            when invoked. <br> <br>
+
+            In JavaScript, functions are <i>first class objects</i>. This means that, like other objects you’ve 
+            encountered, JavaScript functions can have properties such as length, names etc and methods such
+            as <i>toString</i> etc.
+        </p>
+
+        <h2><i>Example 1</i></h2>
+
+        <img src="image/higher_function/function.PNG" alt="code sample">
+
+        <h3>Output:</h3>
+
+        <p id="example1"></p>
+
+        <script>
+            const checkFourPlusFourEqualsEightAThousandTimes = () => {
+                for(let i = 1; i <= 1000; i++) {
+                    if((4 + 4) != 8) {
+                        //console.log('Something went wrong!');
+                        document.getElementById('example1').innerHTML = "Something went wrong!";
+                    }
+                }
+            }
+            //reassigning the function
+
+            const isFourPlusFour = checkFourPlusFourEqualsEightAThousandTimes;
+
+            isFourPlusFour(); //calling the function
+            //using the name property to call the name of the original function
+            console.log(isFourPlusFour.name); 
+
+            document.getElementById('example1').innerHTML = isFourPlusFour.name;
+        </script>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="higher_order_func.html">BACK</a></button>
+            <button class="next-btn"><a href="functions_as_parameters.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
