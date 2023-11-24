@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HIGHER-ORDER FUNCTIONS</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h3>HIGHER-ORDER FUNCTIONS</h3>
+
+        <h1>Functions as Parameters</h1>
+
+        <p>
+            As you know, a parameter is a placeholder for the data that gets passed into a function. 
+            Since functions can behave like any other type of data in JavaScript, it might not 
+            surprise you to learn that functions can accept other functions as parameters. A  
+            <b>higher-order function</b>is a function that either accepts functions as parameters, 
+            returns a function, or both! We call functions that get passed in as parameters 
+            <b>callback functions</b>. Callback functions get invoked during the execution of 
+            the higher-order function. <br><br>
+
+
+            When we invoke a <b>higher-order function</b>, and pass another function in as an argument,
+            we don’t invoke the argument function. Invoking it would evaluate to passing in the return 
+            value of that function call. With <b>callback functions</b>, we pass in the function itself 
+            by typing the function name without the parentheses: <br> <br>
+
+            let's see an illustration:
+
+            <pre>
+                const higherOrderFunc = param => {
+                    param();
+                    return `I just invoked ${param.name} as a callback function!`
+                  }
+                   
+                  const anotherFunc = () => {
+                    return 'I\'m being invoked by the higher-order function!';
+                  }
+                  
+                  higherOrderFunc(anotherFunc);
+            </pre>
+
+            <!-- <script>
+                const higherOrderFunc = param => {
+                    param();
+                    return `I just invoked ${param.name} as a callback function!`
+                }
+ 
+                const anotherFunc = () => {
+                    return 'I\'m being invoked by the higher-order function!';
+                }
+
+                higherOrderFunc(anotherFunc);
+
+            </script> -->
+
+            In this illustration, you will notice the following: 
+
+            <li>
+                We wrote a higher-order function <b>higherOrderFunc</b> that accepts a single parameter, <b>param</b>.
+            </li>
+            <li>
+                Inside the body, <b>param</b> gets invoked using parentheses.
+            </li>
+            <li>
+                Then a string is returned, telling us the <b>name</b> of the callback function that was passed in.
+            </li>
+            <li>
+                Below the higher-order function, we have another function aptly named <b>anotherFunc</b>.
+                This function aspires to be called inside the higher-order function.
+            </li>
+            <li>
+                Lastly, we invoke <b>higherOrderFunc()</b>, passing in <b>anotherFunc</b> as its argument, 
+                meaning it can now be called by the higher-order function.
+            </li>           
+            
+            
+            <!-- when we run our code, instead of invoking the anonymous arrow function,
+            we are actually passing in the reference to the named function "anotherFunc". The result
+            will be: <br>
+            I just invoked I'm being invoked by the higher-order function!
+            This means that if we want to use the same logic across multiple places within our program,
+            we can create a reusable higher order function. Here's how we could do it:
+            <pre>
+                const higherOrderFunc = (func) => {
+                    func();
+                    return `I just invoked ${func.name} as a callback function!`;
+                    };
+                    // Create two different callback functions
+                    const firstCallback = () => console.log('First callback');
+                    const secondCallback = () => console.log('Second callback');
+                    // Use each one with the higher order function
+                    higherOrderFunc(firstCallback);
+                    higherOrderFunc(secondCallback);
+            </pre> -->
+            
+            So, in summary, a higher-order function is a function that takes another function as its input,
+            returning a new function. It allows us to reuse functionality across many parts of our application.
+            It also makes testing easier because we can easily mock out the inner function for unit tests.
+        </p>
+
+        <h2>Anonymous Function</h2>
+
+        <p>
+            An anonymous function is a function without a name. It can also be passed as an argument
+            or returned from another function. They are often used as arguments for other functions,
+            such as event handlers and callbacks. <br><br>
+
+            The illustration below counts from 1 to 20.
+
+            <pre>
+                higherOrderFunc(() => {
+                    for (let i = 0; i <= 20; i++){
+                      console.log(i);
+                    }
+                  });
+            </pre>
+        </p>
+
+        <script>
+            higherOrderFunc(() => {
+                for (let i = 0; i <= 10; i++){
+                    console.log(i);
+                }
+            });
+        </script>
+
+        <h2><i>Exercise from CodeCademy</i></h2>
+
+        <script>
+            const addTwo = num => {
+                return num + 2;
+            }
+
+            const checkConsistentOutput = (func, val) => {
+                let checkA = val + 2;
+                let checkB = func(val);
+                return checkA === checkB ? func(val) : 'inconsistent results';  
+            }
+
+            console.log(checkConsistentOutput(addTwo, 15));
+        </script>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="function_as_data.html">BACK</a></button>
+            <button class="next-btn"><a href="iterators_intro.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
