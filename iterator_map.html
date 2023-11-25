@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The .map() Method</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>The .map() Method</h1>
+
+        <p>
+            The <b>.map( )</b> method works similar like the <b>.forEach()</b> method.
+            The only difference is that it returns a new array. <br><br>
+
+            When <code>.map()</code> is called on an array, it takes an argument of a 
+            callback function and returns a new array! Take a look at an illustration of 
+            calling <code>.map():</code> <br><br>
+
+            <pre>
+                const numbs = [1, 2, 3, 4, 5];
+                const newNumbs = numbs.map(number => {
+                    return number * 5;
+                    });
+                console.log(newNumbs);
+            </pre>
+
+            <script>
+                const numbs = [1, 2, 3, 4, 5];
+                const newNumbs = numbs.map(number => {
+                    return number * 5;
+                    });
+                console.log(newNumbs);
+            </script>
+        </p>
+
+        <h3>Output:</h3>
+       
+        <pre>
+            [5, 10, 15, 20, 25]            
+        </pre>
+
+        <p>
+            In the illustration above:
+            <li><code>numbs</code> is an array of numbers.</li>
+            <li>
+                <code>newNumbs</code> will store the return value of calling <code>.map()</code> on <code>numbs</code>.
+            </li>
+            <li>
+                <code>numbs.map</code> will iterate through each element in the <code>numbs</code> array and 
+                pass the element into the callback function.
+            </li>
+            <li>
+                <code>return number * 5</code> is the code we wish to execute upon each element in the array. 
+                This will save each value from the <code>numbs</code> array, multiplied by <code>10</code>, 
+                into a new array called <code>newNumbs</code>.
+            </li>
+        </p>
+
+
+        <h2><i>Exercise</i></h2>
+
+        <p>
+            We have a shopping list that contains Tomatoes, Eggs, Carrots, Hamburger, Milk, Apples, 
+            Toothpaste, , and Sugar. <br><br>
+
+            <li>
+                Arrange the items in a array with a <code>const</code> variable called 
+                <code>shoppingList</code>
+            </li>
+            <li>
+                Use <code>.map()</code> to create a new array that contains the first character 
+                of each string in the <code>shoppingList</code> array. Save the new array to a 
+                <code>const</code> variable named <code>hiddenWord</code>.
+            </li> <br><br>
+
+
+
+            <script>
+                const shoppingList = ['Tomatoes', 'Eggs', 'Carrots', 'Hamburger', 'Milk', 'Apples',
+                'Toothpaste', 'Eggroll', 'Sugar'];
+
+                const hiddenWord = shoppingList.map(string =>
+                {
+                return string[0];
+                })
+
+                document.write(hiddenWord.join(''));
+            </script>
+        </p>
+
+
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="iterator_foreach.html">BACK</a></button>
+            <button class="next-btn"><a href="iterator_foreach.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
