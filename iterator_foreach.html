@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The .forEach() Method</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>The .forEach() Method</h1>
+
+        <p>
+            <b>.forEach()</b> executes the same code for each element of an array. <br><br>
+
+            See illustraton below:
+
+            <pre>
+                const colors = ['Red', 'Blue', 'Green', 'Yellow'];
+                colors.forEach(function(myColors){
+                    console.log('I love ' + myColors);
+                })
+            </pre>
+        </p>
+
+        <script>
+                const colors = ['Red', 'Blue', 'Green', 'Yellow'];
+                colors.forEach(function(myColors){
+                    console.log('I love ' + myColors);
+                })
+        </script>
+
+        <h3>Output:</h3>
+        <pre>
+            I love Red
+            I love Blue
+            I love Green
+            I love Yellow
+        </pre>
+     
+        <p>
+            The above code will log nicely formatted list of colors to the console as shown 
+            in the output section. Let’s explore the syntax of invoking <b>.forEach()</b>. <br><br>
+
+            <b>Syntax:</b> <br><br>
+
+            <code>arrayName.forEach((element) => { // do something with element });</code>
+            In this case, we have a variable called "colors", which is an array containing four elements.
+            We are using the <b>.ForEach()</b> method on that array and passing it a function (arrow function). 
+            This arrow function takes one parameter - "element". <br>
+            Inside the curly braces, you can perform any operation on that particular element. <br>
+            Here, it's just printing out the color using the <b>console.log()</b> method.
+        </p>
+
+        <h2><i>Illustration 2</i></h2>
+
+        <pre>
+            const cars = ['Honda', 'Toyota', 'Ford', 'Benz'];
+
+            // Iterate over cars below
+            cars.forEach(fruit => console.log(`I want to eat a ${cars}.`))
+        </pre>
+
+        <script>
+            const cars = ['Honda', 'Toyota', 'Ford', 'Benz'];
+
+            // Iterate over cars below
+            cars.forEach(fruit => console.log(`I want to drive a ${cars}.`))
+        </script>
+
+        <h3><i>Output:</i></h3>
+
+        <pre>
+            I want to drive a Honda.
+            I want to drive a Toyota.
+            I want to drive a Ford.
+            I want to drive a Benz.
+        </pre>
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="iterators_intro.html">BACK</a></button>
+            <button class="next-btn"><a href="iterator_map.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
