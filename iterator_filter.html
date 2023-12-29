@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The .filter() Method</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>The .filter() Method</h1>
+
+        <p>
+            The <code>.filter()</code> method is a powerful array method that allows you to create new arrays 
+            by filtering the elements of an existing one based on specific criteria. It creates a new array 
+            with all elements that pass the test implemented by the provided function. If no elements
+            pass the test, it returns an empty array. The returned result is not modified if the original
+            array is sorted or has any side effects. The array is not mutated i.e it does not change. <br><br>
+
+            Let's look at an illustration:
+
+            <pre>
+                const numbers = [2, 5, 9, 4];
+                let filteredNumbers = numbers.filter(function (number) {
+                    return number % 2 === 0; // only even numbers will be included
+                    });
+                    console.log(filteredNumbers); // Output: [2, 4]
+            </pre>
+
+            Let's look ay another example using strings:
+
+            <pre>
+                const animalNames = ['Tiger', 'Lion', 'Dog', 'Antelope', 'Elephant'];
+                const namesStartingWithA = animalNames.filter(function (name){
+                    return name[0].toLowerCase() ==='a';
+                    })
+                    console.log(namesStartingWithA); // Output: ["Antelope"]
+            </pre>
+
+            <script>
+                const animalNames = ['Tiger', 'Lion', 'Dog', 'Antelope', 'Elephant'];
+                const namesStartingWithA = animalNames.filter(function (name){
+                    return name[0].toLowerCase() ==='a';
+                    })
+                    console.log(namesStartingWithA); // Output: ["Antelope"]
+            </script>
+
+            Another Example:
+
+            <pre>
+                const names = ['Joy', 'Bella', 'Mike', 'Joe'];
+                const shortNames = names.filter(name =>{
+                    return name.length <=3;
+                    });
+                console.log(shortNames);//Output:['Joy', 'Joe']
+            </pre>
+
+            <script>
+                const names = ['Joy', 'Bella', 'Mike', 'Joe'];
+                const shortNames = names.filter(name =>{
+                    return name.length <=3;
+                    });
+                console.log(shortNames);//Output:['Joy', 'Joe']
+            </script>
+
+            In the last example;
+            
+            <li>We have an array called <code>names</code> which contains string elements</li>
+            <li>
+                The filter method is used to create a new array <code>shortNames</code> with all elements 
+                that pass the test implemented by the provided function.
+            </li>
+            <li> 
+                The arrow function in this case checks if each element of the array has length less than 
+                or equal to 3 characters.
+            </li>
+            <li>
+                The output will be an array containing only the elements from the original array whose 
+                length was less than or equal to 3.
+            </li>
+
+        </p>
+
+        <script>
+            const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+            // Call .filter() on randomNumbers below
+            const smallNumbers = randomNumbers.filter(number =>
+            {
+                return number <= 250;
+            })
+
+            const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+
+
+            // Call .filter() on favoriteWords below
+
+            const longFavoriteWords = favoriteWords.filter(word => 
+            {
+                return word.length > 7;
+            })
+
+        </script>
+
+
+        <script>
+            const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+            const foundAnimal = animals.findIndex(animal => {
+            return animal === 'elephant';
+            })
+
+            //To find the index of the first animal that startsWithSwith letter 's'
+            const startsWithS = animals.findIndex(animal => {
+             return animal[0] === 's' ? true : false;
+            });
+
+        </script>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="iterator_map.html">BACK</a></button>
+            <button class="next-btn"><a href="iterator_findindex.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
