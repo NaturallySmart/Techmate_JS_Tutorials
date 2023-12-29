@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The .findIndex() Method</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>The .findIndex() Method</h1>
+
+        <p>
+            The <code>findIndex()</code> method returns the index of the first element in an array that 
+            satisfies a certain condition (provided as a function). If no elements satisfy the condition, it
+            will return -1. This is useful when you want to find the position of an item within an array. <br><br>
+
+            Let's see an illustration:
+
+            <pre>
+                const numbers = [4, 2, 7, 5, 8];
+                const result = numbers.findIndex(num => {
+                    return num > 6
+                    });
+                console.log(result); //Outputs: 2
+
+                //To check what element has index of 2:
+
+                console.log(numbers[2]) //Outputs: 7
+            </pre>                            
+                
+            The above illustration will return 2 because the number at position 2 which is 7, is greater 
+            than 6 and this is the first occurrence.
+            
+
+            <script>
+                const numbers = [4, 2, 7, 5, 8];
+                const result = numbers.findIndex(num => {
+                    return num > 6
+                    });
+                console.log(result); //Outputs: 2
+
+                //To check what element has index of 3:
+
+                console.log(numbers[2]) //Outputs: 7
+        </script>
+
+            Now let's check another illustration where the elements in the array does not meet the 
+            condition.
+
+            <pre>
+                const numbs = [4, 2, 7, 5, 8];
+                const newResult = numbs.findIndex(num => {
+                    return num > 10;
+                });
+                console.log(newResult) // Outputs -1
+            </pre>
+
+            <script>
+                const numbs = [4, 2, 7, 5, 8];
+                const newResult = numbs.findIndex(num => {
+                    return num > 10;
+                });
+                console.log(newResult) // Outputs -1
+
+
+
+            </script>
+
+            <!-- <script>
+                const fruits = ['apple', 'banana', 'orange'];
+                const output = fruits.findIndex(fruit => {
+                    return fruit === 'grape';
+                    });
+                console.log(result); // Outputs -1
+            </script> -->
+
+        </p>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="iterator_filter.html">BACK</a></button>
+            <button class="next-btn"><a href="iterator_reduce.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
