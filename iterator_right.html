@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Choose the Right Iterator</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Choose the Right Iterator</h1>
+
+        <p>
+            In this lesson we will learn about iterators and how to use them in different scenarios.
+            There are many iteration methods you can choose. In addition to learning the correct syntax 
+            for the use of iteration methods, it is also important to learn how to choose the correct 
+            method for different scenarios. The exercises below will give you the opportunity to do just 
+            that! <br><br>
+
+            You’ll see errors pop up in the terminal as you work through this exercise, but by the end the 
+            errors will be gone! <br><br>
+
+
+            <pre>
+                const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 
+                'Denver', 'Eskisehir', 'Medellin', 'Yokohama'];
+
+                const nums = [1, 50, 75, 200, 350, 525, 1000];
+
+                //  Choose a method that will return undefined
+                cities.method(city => console.log('Have you visited ' + city + '?'));
+
+                // Choose a method that will return a new array
+                const longCities = cities.method(city => city.length > 7);
+
+                // Choose a method that will return a single value
+                const word = cities.method((acc, currVal) => {
+                return acc + currVal[0]
+                }, "C");
+
+                console.log(word)
+
+                // Choose a method that will return a new array
+                const smallerNums = nums.method(num => num - 5);
+
+                // Choose a method that will return a boolean value
+                nums.method(num => num < 0);
+
+            </pre>
+        </p>
+
+        <h3>Tasks:</h3>
+        <ol>
+            <li>
+                Replace the word method in the first <code>method</code> call with a method that will do something 
+                to each of the values in the array and return <code>undefined</code>.
+            </li>
+            <li>
+                In the second method call, replace the word <code>method</code> with a method that will 
+                return a new array with only those elements longer than <code>7</code> characters.
+            </li>
+            <li>
+                In the third method call, replace the word <code> method</code> with a method that accepts 
+                an array containing multiple values and returns a single value.
+            </li>
+            <li>
+                In the fourth method call, replace the word <code>method</code> with a method that will return 
+                a new array of numbers returned from the function.
+            </li>
+            <li>
+                In the fifth method call, replace the word <code>method</code> with a method that will return 
+                a boolean value.
+            </li>
+        </ol>
+
+        <script>
+            const cities = ['Orlando', 'Dubai', 'Edinburgh', 'Chennai', 'Accra', 'Denver', 
+                            'Eskisehir', 'Medellin', 'Yokohama'];
+
+            const nums = [1, 50, 75, 200, 350, 525, 1000];
+
+            //  Choose a method that will return undefined
+            cities.forEach(city => console.log('Have you visited ' + city + '?'));
+
+            // Choose a method that will return a new array
+            const longCities = cities.filter(city => city.length > 7);
+
+            // Choose a method that will return a single value
+            const word = cities.reduce((acc, currVal) => {
+                return acc + currVal[0]
+            }, "C");
+
+            console.log(word)
+
+            // Choose a method that will return a new array
+            const smallerNums = nums.map(num => num - 5);
+
+            // Choose a method that will return a boolean value
+            nums.every(num => num < 0);
+            // OR nums.some(num => num < 0);
+
+        </script>
+
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="iterator_reduce.html">BACK</a></button>
+            <button class="next-btn"><a href="objects_intro.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
