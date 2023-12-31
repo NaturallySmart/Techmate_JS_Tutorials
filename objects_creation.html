@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Creating Object Literals</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Creating Object Literals</h1>
+
+        <p>
+            In JavaScript, we can create an <code>object literal</code> by assigning a value to the key of 
+            that property using curly braces {}. For Instance:
+
+            <pre>
+                let person = { }; //person is an empty object
+            </pre>
+
+            We fill an object with unordered data. This data is organized into <i>key-value pairs</i>. A key 
+            is like a variable name that points to a location in memory that holds a value.  <br><br>
+
+            A key’s value can be of any data type in the language e.g boolean, string, numbers etc, including 
+            functions or other objects. <br><br>
+
+            Here's how you do it:
+            <ul>
+                <li>Create an object.</li>
+                <li>Add properties and values to the object.</li>
+                <li>Access the properties through dot notation (.) or square brackets ([])</li>                
+            </ul>
+        </p>
+
+        <h2>How to Make a Key-value pair</h2>
+
+        <p>
+            To make a key-value pair, follow these steps:
+            <ol>
+                <li>Start with an opening curly brace ({).</li>
+                <li>Write your desired key (variable) followed by a colon (:).</li>
+                <li>Then write the corresponding value for each key.</li>
+                <li>Finally, end the object with a closing curly brace (}).</li>
+            </ol>
+
+            We make a key-value pair by writing the key’s name, or <i>identifier</i>, followed by a colon and 
+            then the value. We separate each key-value pair in an object literal with a comma <code>(,)</code>. 
+            Keys are strings, but when we have a key that does not have any special characters in it, JavaScript 
+            allows us to omit the quotation marks: <br><br>
+
+            For Example:
+
+            <pre>
+                const car = {'Year Make': 2023, color: 'White'};
+            </pre>
+
+            Frpm the above, <br><br>
+
+            <li><code>Car</code> is the Object</li>
+            <li>
+                <code>'Year Make'</code> is a key that holds a value which is a number <code>2023</code>. 
+                Quoatation marks are used here because it has a space character.
+            </li>
+            <li>
+                <code>color</code> is another key that holds a string value <code>White</code>. No quotes needed 
+                as there is no spaces or an special character.
+            </li>
+        </p>
+
+        <h2><i>Exercise</i></h2>
+
+        <p>Create an Object named myCar with a three keys that holds a string, number and  boolean value.</p>
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="objects_intro.html">BACK</a></button>
+            <button class="next-btn"><a href="objects_access.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
