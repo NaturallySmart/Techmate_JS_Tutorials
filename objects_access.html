@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Accessing Object Properties</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Accessing Object Properties</h1>
+
+        <p>
+            In Javascript there are two methods to access the property of an Object. One of
+            such method is the <b>Dot (.) Notation</b>
+        </p>
+
+        <h2>The Dot <code>.</code> Notation</h2>
+
+        <p>
+            In JavaScript, we can access the properties of an object using dot notation. This is done by 
+            placing a period (.) between the variable holding the reference to the object and the property 
+            you want to access. For example:
+
+            <pre>
+                let person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    age: 35
+                    };
+                console.log(person.firstName); // Outputs: John
+            </pre>
+
+            Does the above looks familiar? Remember how we usually find the length property of an string?
+
+            <pre>
+                let str = "Techmate";
+                console.log(str.length); // Outputs: 8
+            </pre>
+
+            If we try to access a property that does not exist on that object, <code>undefined</code> will 
+            be returned. e.g: 
+
+            <pre>
+                console.log(person.favColor); // Outputs: Undefined
+            </pre>
+        </p>
+
+        <h2>Exercise</h2>
+
+        <pre>
+            let person = {
+                firstName: 'Joe',
+                lastName: 'Smith',
+                age: 40,
+                gender: 'Male'
+                favColor: 'Blue',
+                techSkills: ['NodeJs', 'Javascript', 'React', 'PHP']
+            };
+        </pre>
+
+        <p>
+            Use the dot operator to access the following:
+
+            <li>
+                The full name of the person in the format "Firstname Lastname"
+            </li>
+            <li>
+                If Mike is the same age with Joe Smith, access Mike's Age from that of Joe Smith.
+            </li>
+            <li>
+                Ray has the techSkills of JavaScript. Access JavaScript from Joe Smith's techSkills
+                and assign it to Ray.
+            </li>
+            <li>Output all result on the browser</li>
+        </p>
+
+        <h3>Output:</h3>
+
+        <script>
+            let person = {
+                firstName: 'Joe',
+                lastName: 'Smith',
+                age: 40,
+                gender: 'Male',
+                favColor: 'Blue',
+                techSkills: ['NodeJs', 'Javascript', 'React', 'PHP'],
+                }
+
+                // function getFullName(){
+                //     return `${person.firstName} ${person.lastName}`;
+                //     }
+                //     if (person.age === person.mikeAge){
+                //         person.rayTechSkill = person.techSkills[1];
+                //         };
+                //         console.log(getFullName());
+                //         console.log(`Ray's Tech Skill is ${person.techSkills[1]}`);
+
+                document.write(`${person.firstName} ${person.lastName}`);
+
+                document.write('<br>');
+            
+                document.write(`Mike's age is ${person.age}`);
+
+                document.write('<br>');
+
+                document.write(`Ray's Tech Skill is ${person.techSkills[1]}`);
+        </script>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="objects_creation.html">BACK</a></button>
+            <button class="next-btn"><a href="object_bracket_notation.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
