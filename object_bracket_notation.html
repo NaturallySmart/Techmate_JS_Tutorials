@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Accessing Object Properties | Bracket Notation</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Accessing Object Properties</h1>
+        <h2>Bracket Notation</h2>
+
+        <p>
+            In JavaScript, you can also access the properties of an object using <code>bracket notation</code>.
+            This is done by specifying the property's key within square brackets following the object variable. <br><br>
+
+            Remember we have used brackets when finding the index of an array, e.g: 
+
+            <pre>
+                const arr = [A,6,7];
+                console.log(arr[1]); // Outputs: 6
+            </pre>
+
+            To use bracket notation to access an object’s property, we pass in the property name (key) as a string. <br><br>
+
+            We must use bracket notation when accessing keys that have numbers, spaces, or special characters in
+            them. Without bracket notation in these situations, our code would throw an error.            
+        </p>
+
+        <h2><i>Illustration:</i></h2>
+
+        <pre>
+            const person = {
+                'First Name': "John",
+                'Last Name': "Doe",
+                age: 35,
+                'Active Status': true
+            };
+
+            //Using bracket Notation to access the keys
+
+            person['First Name'];  //output: John
+            person['Last Name'];   //output: Doe
+            person['age'];         //output: 35
+            person['Active Status'];//output: true
+            person['Origin City'];  //output: undefined
+        </pre>
+
+        <p>
+            With bracket notation you can also use a variable inside the brackets to select the keys of an object. 
+            This can be especially helpful when working with functions.
+
+            <pre>
+                let getPersonProp(objectName, propName) => 
+                person[propName];
+
+                return getPersonProp(person, 'age'); // return 35        
+            </pre>
+
+
+            If we tried to write our <code>getPersonProp()</code> function with dot notation 
+            <code>(objectName.propName)</code> the computer would look for a key of <code>'propName'</code> 
+            on our object and not the value of the <code>propName</code> parameter.
+        </p>
+
+
+        <h2>Exercise</h2>
+
+        <pre>
+            let person = {
+                firstName: 'Joe',
+                lastName: 'Smith',
+                age: 40,
+                gender: 'Male'
+                favColor: 'Blue',
+                techSkills: ['NodeJs', 'Javascript', 'React', 'PHP']
+            };
+        </pre>
+
+        <p>
+            Use the bracket notation to access the following:
+
+            <li>
+                The full name of the person in the format "Firstname Lastname"
+            </li>
+            <li>
+                If Mike is the same age with Joe Smith, access Mike's Age from that of Joe Smith.
+            </li>
+            <li>
+                Ray has the techSkills of JavaScript. Access JavaScript from Joe Smith's techSkills
+                and assign it to Ray.
+            </li>
+            <li>Output all result on the browser</li>
+        </p>
+
+        <h3>Output:</h3>
+
+        <script>
+            let person = {
+                firstName: 'Joe',
+                lastName: 'Smith',
+                age: 40,
+                gender: 'Male',
+                favColor: 'Blue',
+                techSkills: ['NodeJs', 'Javascript', 'React', 'PHP'],
+                }
+
+                // function getFullName(){
+                //     return `${person.firstName} ${person.lastName}`;
+                //     }
+                //     if (person.age === person.mikeAge){
+                //         person.rayTechSkill = person.techSkills[1];
+                //         };
+                //         console.log(getFullName());
+                //         console.log(`Ray's Tech Skill is ${person.techSkills[1]}`);
+
+                document.write(`${person['firstName']} ${person['lastName']}`);
+
+                document.write('<br>');
+            
+                document.write(`Mike's age is ${person['age']}`);
+
+                document.write('<br>');
+
+                document.write(`Ray's Tech Skill is ${person['techSkills[1]']}`);
+        </script>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="objects_access.html">BACK</a></button>
+            <button class="next-btn"><a href="object_property.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
