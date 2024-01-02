@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Object Methods</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Object Methods</h1>
+        <p>
+            In JavaScript, objects can have their own methods which are functions that belong to 
+            the object and can be called on it. These methods can perform a
+            variety of tasks such as calculating values or modifying properties. <br><br>
+
+            When the data stored on an object is a function we call that a <code>method</code>. 
+            A property is what an object has, while a method is what an object does. <br><br>
+
+            We are already familiar with Methods of some sort as we have been using it all along.
+            For example: when you use the Math Object's <code>Math.sqrt()</code>,
+            <code>Math.max()</code>, <code>Math.min()</code>, etc., these are all methods.
+            Here, <code>Math</code> is  global JavaScript Object while <code>.sqrt()</code>,
+            <code>.max()</code> and <code>.min()</code> are methods on it. <code>Console</code>
+            is also a global Object in JavaScript while <code>.log()</code> is a method on that
+            object. <br><br>
+
+            We can include methods in our object literals by creating ordinary, colon-separated 
+            key-value pairs. The key serves as our method’s name, while the value is an anonymous 
+            function expression (or any other type of function). This allows us to create custom
+            methods for our objects. <br><br>
+
+            Let's see how this works!
+    
+            <pre>
+                const car = {
+                    mycarDesc: function() {
+                        console.log('My car is a red Toyota Camry with a 
+                        5 speed auto transmission. I bought the car from
+                        a friend who was moving away');
+                    }
+                };
+            </pre>
+       
+            With the new method syntax introduced in ES6 we can omit the colon and the function keyword.
+            So the above will look like this.
+
+            <pre>
+                const car = {
+                    mycarDesc() {
+                        console.log('My car is a red Toyota Camry with a
+                        5 speed auto transmission. I bought the car from
+                        a friend who was moving away');
+                    }
+                };
+            </pre>
+        </p>
+
+        <h2>Invoking Object Method</h2>
+
+        <p>
+            Object methods are invoked by appending the object’s name with the dot operator followed 
+            by the method name and parentheses:
+
+            <pre>
+                car.mycarDesc(); // Prints:
+                'My car is a red Toyota Camry with a 5 speed auto transmission. 
+                I bought the car from a friend who was moving away'.
+            </pre>
+        </p>
+
+        <h2>Add Exercise</h2>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="object_property.html">BACK</a></button>
+            <button class="next-btn"><a href="object_nested.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
