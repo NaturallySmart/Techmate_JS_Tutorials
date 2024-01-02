@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Object Property Assignment</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Object Property Assignment</h1>
+
+        <p>
+            In JavaScript, objects are collections of properties and each property has a key (name) 
+            associated with a value. Objects are mutable meaning we can update them after we create them! <br><br>
+
+            We can use either dot notation, <code>.</code>, or bracket notation, <code>[]</code>, and the assignment 
+            operator, <code>=</code> to add new key-value pairs to an object or change an existing property. <br><br>
+
+            See the Illustration below:
+
+            <pre>
+                Car {'Fuel Type'} = 'Petrol';
+                car.make = 'Toyota';
+            </pre>
+
+            In the above Illustration:
+
+            <li>
+                The first line is an example of Object Property assignment where we assign value to 
+                <code>Fuel type</code> as <code>Petrol</code> using the <code>bracket notation</code>.
+            </li>
+            <li>
+                The second line is an example of Object Property assignment where we assign value to 
+                <code>make</code> as <code>Toyota</code> using the <code>dot notation</code>.
+            </li>
+
+
+            One of two things can happen with property assignment:
+            <ul>
+                <li>
+                    If the object does not have that property then it will be created for you.
+                </li>
+                <li>
+                    If the object already contains that property then its existing value will be 
+                    replaced by new one.
+                </li>
+            </ul>
+        </p>
+
+        <p class="note">
+            <b>Note:</b>
+            It’s important to know that although we can’t reassign an object declared with <code>const</code>, 
+            we can still mutate it, meaning we can add new properties and change the properties that are there.            </p>
+        </p>
+
+        <h2>Illustration</h2>
+
+        <pre>
+            const car = {make: 'Toyota'};
+            car = {make: 'Toyota'}; // TypeError: Assignment to constant variable.
+            car.make = 'Honda'; // Changes the value of the make property.
+
+            car.color = 'Red'; // Create a new key of 'color' with a value of 'red'
+        </pre>
+
+        <p>You can delete a property from an object with the delete operator.</p>
+
+        <pre>
+            const car = {
+                make: 'Toyota';
+                color: 'red';
+                'Fuel Type': 'Petrol';
+                owner: 'Ray Jones';
+            }
+
+            delete car.color; // removes the color property
+        </pre>
+
+        <script>
+            let spaceship = {
+            'Fuel Type' : 'Turbo Fuel',
+            homePlanet : 'Earth',
+            color: 'silver',
+            'Secret Mission' : 'Discover life outside of Earth.'
+            };
+
+            // Write your code below
+            spaceship.color = 'glorious gold';
+            spaceship.numEngines = 7;
+
+            delete spaceship['Secret Mission'];
+        </script>
+
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="object_bracket_notation.html">BACK</a></button>
+            <button class="next-btn"><a href="object_methods.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
