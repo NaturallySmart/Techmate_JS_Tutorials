@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Objects | Pass By Reference</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Pass By Reference</h1>
+
+        <p>
+            Objects are passed by reference. This means when we pass a variable assigned to an 
+            object into a function as an argument, the computer interprets the parameter name 
+            as pointing to the space in memory holding that object. As a result, functions which 
+            change object properties actually mutate the object permanently (even when the object 
+            is assigned to a const variable).
+
+            let's see an illustration.  
+            
+            <pre>
+                // create an object and assign it to a constant variable
+                const car = {
+                    make: "Toyota", 
+                    color: "white",
+                    fuel: "Petrol"
+                };
+    
+                //setting a new color attribute
+                let newColor = obj => {
+                    obj.color = 'Red'
+                };
+    
+                //assigning the new color attribute to the object (car)
+    
+                newColor(car);
+    
+                console.log(car.color); // returns Red
+            </pre>
+
+            Our function newColor() permanently changed the color of our car object. 
+            However, reassignment of the car variable wouldn’t work in the same way:
+        </p>
+
+        <script>
+            // create an object and assign it to a constant variable
+            const car = {
+                make: "Toyota", 
+                color: "white",
+                fuel: "Petrol"
+            };
+
+            //setting a new color attribute
+            let newColor = obj => {
+                obj.color = 'Red'
+            };
+
+            //assigning the new color attribute to the object (car)
+
+            newColor(car);
+
+            console.log(car.color); // returns Red
+        </script>
+
+        
+        <script>
+
+            // See Exercise on CodeCademy
+            let spaceship = {
+                'Fuel Type' : 'Turbo Fuel',
+                homePlanet : 'Earth'
+            };
+
+            let greenEnergy = obj => {
+                obj['Fuel Type'] = 'avocado oil';
+            };
+
+            let remotelyDisable = obj => {
+                obj.disabled = true;
+            };
+
+            greenEnergy(spaceship);
+
+            remotelyDisable(spaceship);
+
+            console.log(spaceship);
+        </script>
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="object_nested.html">BACK</a></button>
+            <button class="next-btn"><a href="object_looping.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
