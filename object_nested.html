@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nested Objects</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Nested Objects</h1>
+
+        <p>
+            Most times, an object are often nested. That is, objects might have another 
+            object as a property which in turn could have a property that might be an 
+            array of other objects and so on. This can get pretty complex and it's
+            important to know how to handle these situations. <br><br>
+
+            In JavaScript, we use the dot notation (.) to access properties of
+            nested objects. For example:
+            <pre>
+                const person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    age: 32,
+                    address: {
+                        streetAddress: "4567 Main St.",
+                        city: "New York City",
+                        state: "NY",
+                        zipCode: "10001"
+                        }
+                        };
+                console.log(person.address); // Output: {streetAddress: 
+                "4567 Main St.", city: "New York City", state: "NY", zipCode: 
+                "10001"}
+                   
+                    
+            </pre>
+
+            We can chain operators to access nested properties. We’ll have to pay attention to which 
+            operator makes sense to use in each layer. It can be helpful to pretend you are the computer 
+            and evaluate each expression from left to right so that each operation starts to feel a little 
+            more manageable.
+
+        </p> 
+
+        <script>
+
+            //see exercise on CodeCademy
+
+            let spaceship = {
+                passengers: [{name: 'Space Dog'}], 
+                telescope: {
+                    yearBuilt: 2018,
+                    model: "91031-XLT",
+                    focalLength: 2032 
+                },
+                crew: {
+                    captain: { 
+                    name: 'Sandra', 
+                    degree: 'Computer Engineering', 
+                    encourageTeam() { console.log('We got this!') },
+                    'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+                },
+                engine: {
+                    model: "Nimbus2000"
+                },
+                nanoelectronics: {
+                    computer: {
+                        terabytes: 100,
+                        monitors: "HD"
+                    },
+                    'back-up': {
+                        battery: "Lithium",
+                        terabytes: 50
+                    }
+                }
+            }; 
+
+            let capFave = spaceship.crew.captain['favorite foods'][0];
+
+            let firstPassenger = spaceship.passengers[0];
+        </script>
+
+
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="object_methods.html">BACK</a></button>
+            <button class="next-btn"><a href="object_passbyref.html">NEXT</a></button>          
+        </div>
+    </section>
+</body>
+</html>
