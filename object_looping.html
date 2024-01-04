@@ -50,7 +50,105 @@ for (let crewMember in spaceship.crew) {
 }
 </script> -->
 
+<pre>
+    let business = {
+        team: {
+            ceo: {
+                name: 'Ray',
+                skills: 'FullStack Development',
+                getstarted() { console.log('Lets start this project!')} 
+            },
+            
+            'frontend Engineer': {
+                name: 'John',
+                skills:'React',
+                design() {console.log ('I will get all the designs sorted')}
+            },
 
+            'Backend Engineer': {
+                name: 'Tom',
+                skills: 'NodeJS',
+                deploy(){console.log('Deployment complete!')},
+            },
+
+            'Project Manager': {
+                name: 'Chris',
+                skills: "Agile/Scrum",
+                plan() {console.log("Let's make a plan.")}
+            },
+
+            'Product Manager': {
+                name: 'Jenny',
+                skills: "User Research, UI/UX",
+                research() {console.log('Gathering user feedback..')}
+            }
+        }
+    };
+
+    // using for in loop
+
+    for (let teamMembers in business.team)
+    {
+        console.log(`${business.team[teamMembers].name} is the ${
+            teamMembers} and has skills in 
+            ${business.team[teamMembers].skills}`);
+    }
+</pre>
+
+
+<script>
+    let business = {
+        team: {
+            ceo: {
+                name: 'Ray',
+                skills: 'FullStack Development',
+                getstarted() { console.log('Lets get this project started!')} 
+            },
+            
+            'frontend Engineer': {
+                name: 'John',
+                skills:'React',
+                design() {console.log ('I will get all the design framework sorted')}
+            },
+
+            'Backend Engineer': {
+                name: 'Tom',
+                skills: 'NodeJS',
+                deploy(){console.log('Deployment complete!')},
+            },
+
+            'Project Manager': {
+                name: 'Chris',
+                skills: "Agile/Scrum",
+                plan() {console.log("Let's make a plan.")}
+            },
+
+            'Product Manager': {
+                name: 'Jenny',
+                skills: "User Research, UI/UX",
+                research() {console.log('Gathering user feedback..')}
+            }
+        }
+    };
+
+    // using for in loop
+
+    for (let teamMembers in business.team)
+    {
+        console.log(`${business.team[teamMembers].name} is the ${
+            teamMembers} and has skills in ${business.team[teamMembers].skills}`);
+    }
+</script>
+
+<p>
+    In the above code, <br>
+
+    1. We have created an object named `business` which contains another object called `team`.
+       This nested object represents our team members along with their details like names and skills.
+    <br>
+    2. We used the for in loop to Iterate over each member of the `team` object using the variable 
+    `teamMembers`. Inside this loop, we can access properties of `business.team[teamMembers]` 
+    such as `business.team[teamMembers].name`, `business.team[teamMembers].skills`, etc.
 
         </p>   
         <div class="nav-button">
