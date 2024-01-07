@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Advance Objects | The this Keyword</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Advance Objects | The this Keyword</h1>
+
+        <p>
+            In JavaScript, the "this" keyword is a special variable that refers to an object. It
+            holds the reference of the current object and allows access to its properties and methods.
+            When we use it inside a method or function, it represents the owner of that method or
+            function. <br>
+
+            See an Illustration below:
+
+            <pre>
+                const car = {
+                    Make: 'Toyota',
+                    Model: 'Camry',
+                    Year: 2019,
+                    Color: 'Blue',
+                    power: '203hp',
+                    getCarDetails() {
+                        return `This ${this.Make} ${this.Model} has a ${this.
+                            power} and was made in ${this.Year}.`;
+                        },
+                };
+                console.log(`${car.getCarDetails()}`)
+                
+
+            </pre>
+
+            <h3>Output:</h3>
+        </p>
+
+
+   
+        <div class="nav-button">
+            <button class="back-btn"><a href="advance_object.html">BACK</a></button>
+            <button class="next-btn"><a href="advance_object.html">NEXT</a></button>       
+        </div>     
+    </section>
+</body>
+</html>
