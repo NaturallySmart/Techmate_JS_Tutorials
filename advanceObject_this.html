@@ -39,7 +39,30 @@
             <h3>Output:</h3>
         </p>
 
+        <script>
+            const car = {
+                Make: 'Toyota',
+                Model: 'Camry',
+                Year: 2019,
+                Color: 'Blue',
+                power: '203hp',
+                getCarDetails() {
+                    return `This ${this.Make} ${this.Model} has a ${this.
+                        power} and was made in ${this.Year}.`;
+                    },
+            };
+            document.write(`${car.getCarDetails()}`)
+        </script>
 
+        <p>
+            In the above example we used this keyword to,
+            refer to properties of the object "car". The method "getCarDetails()" is called on
+            the "car" object using parentheses after its name. This allows us to access the function as
+            if it were a property of the object. Inside the function, "this" refers to the
+            "car" object itself. So, "this.Make", "this.power" etc are accessing the properties of the 
+            "car" object. Then we used <code>String Interpolation</code> to return all the properties we 
+            want to output.
+        </p>
    
         <div class="nav-button">
             <button class="back-btn"><a href="advance_object.html">BACK</a></button>
