@@ -81,7 +81,28 @@
 
             console.log(`${car.getCarDetails()}`)  //Outputs undefined
         </script> -->
+        <h3>Output:</h3>
+        <script>
+            const car = {
+                Make: 'Toyota',
+                Model: 'Camry',
+                Year: 2019,
+                color: 'Blue',
+                power: '203 hp',
+                getCarDetails: function() {
+                return `${this.Make} ${this.Model} has a ${this.power} 
+                and was made in ${this.Year}.`;
+                },
+            };
 
+            document.write(`${car.getCarDetails()}`)
+        </script>
+
+   
+        <div class="nav-button">
+            <button class="back-btn"><a href="advance_object.html">BACK</a></button>
+            <button class="next-btn"><a href="advance_object.html">NEXT</a></button>       
+        </div> 
     </section>
 </body>
 </html>
