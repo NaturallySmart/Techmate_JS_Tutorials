@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Advance Objects | Arrow Functions and This</title>
+    <title>Advance Objects | Using this Keyword in Arrow functions</title>
 </head>
 <body>
     <section class="lesson">
 
-        <h1>Advance Objects | Arrow Functions and This</h1>
+        <h1>Advance Objects | Using this Keyword in Arrow functions</h1>
 
         <p>
-            In this lesson we will learn about arrow functions in JavaScript.
-            An arrow function is a shorter syntax for creating functions in JavaScript.
-            They are used when you want to create a function with a single expression or if the function only
-            has one statement. The syntax of an arrow function is: () => {}
-        </p>
+            In JavaScript, arrow functions do not have their own "this" keyword.
+            The value of "this" is determined by where the function is called from.
+            If you are inside an object method then "this" will refer to that object.
+            But if you use an arrow function outside of any object or method,
+            "this" will be equal to the global object (usually window). <br>
 
+            It is very important to avoid using <code>arrow functions</code> when using <code>this</code>
+            in a method.
 
-   
-        <div class="nav-button">
-            <button class="back-btn"><a href="advance_object.html">BACK</a></button>
-            <button class="next-btn"><a href="advance_object.html">NEXT</a></button>       
-        </div>     
+            <pre>            
+                const car = {
+                    Make: 'Toyota',
+                    Model: 'Camry',
+                    Year: 2019,
+                    Color: 'Blue',
+                    power: '203hp',
+                        getCarDetails:() => {
+                        return `This ${this.Make} ${this.Model} has a ${this.
+                        power} and was made in ${this.Year}.`;
+                    },
+                };
+
+                console.log(`${car.getCarDetails()}`)  //Outputs undefined
+
     </section>
 </body>
 </html>
