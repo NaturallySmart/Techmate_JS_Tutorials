@@ -59,9 +59,47 @@
 
         <h3>Output:</h3>
 
+        <script>
+            const car = {
+                _horsePower: 250,
+                boostPower(){
+                this._horsePower += 75;
+                document.write(`Power Boosted! The car now has ${this._horsePower}hp.`)
+                }
+            };
+            //reassigning _horsePower
+            car._horsePower = '300hp';
+
+            //calling boosPower on Car
+            car.boostPower();
+
+        </script>
+        <p>
+            Notice that a funny string is outputed to the console! This is known as a side-effect of 
+            type-coercion. No need to worry about what this means for now, but it’s important to understand
+            that you can cause unwanted side-effects when mutating objects and their properties. <br><br>
+
+            In our next lesson, we will talk about <code>Getter</code> and <code>Setter</code> methods 
+            which allow us to create more robust privacy controls for our object properties.  
 
 
-    
+            <!-- In this example, we have a <code>car</code> object that represents a car
+            with a horsepower of 250. We then attempt to reassign the value of
+            <code>_horsePower</code>, which is not recommended because it breaks encaps
+            ulation (a principle in Object-Oriented Programming). However, if you must do so
+            for some reason, JavaScript allows it and does not throw an error. Instead, when
+            calling the <code>boostPower()</code> method, it will use the modified value
+            ('300hp') instead of the original one (250). As a result
+            <code>document.write()</code> outputs "Power Boosted! The car
+            now has 300hp.".</s> -->
+
+        </p>      
+   
+        <div class="nav-button">
+            <button class="back-btn"><a href="advanceObject_arrow.html">BACK</a></button>
+            <button class="next-btn"><a href="advanceObject_getters.html">NEXT</a></button>       
+        </div> 
+            
     </section>
 </body>
 </html>
