@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Advance Objects | Privacy</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Advance Objects | Privacy</h1>
+
+        <p>
+            In this lesson we will learn about privacy in JavaScript objects and how to control access to
+            object properties using getters and setters. We'll also discuss the concept of encapsulation 
+            which is a way of hiding internal implementation details within an object from outside code. <br> <br>
+
+            In JavaScript, accessing and updating object properties are fundametal. However, we sometimes do
+            not want other developers to access or update certain object properties, that is, we do not want
+            these object properties to be mutable or change in value. <br><br>
+
+            In JavaScript, there is no built-in privacy feature, so as JavaScript developers, we need to
+            follow a naming conventions that signal to other developers how to interact with a property. 
+            One common convention is to place an underscore <code>_ </code>before the name of a property 
+            to mean that the property should not be altered. Here’s an example of using <code>_</code> to 
+            prepend a property.
+
+            <pre>
+                const accountDetails = {
+                    name: "John Doe",
+                    _accountBalance: 50,000
+                };
+            </pre>
+
+    
+    </section>
+</body>
+</html>
