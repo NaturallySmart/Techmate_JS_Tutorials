@@ -32,6 +32,34 @@
                     _accountBalance: 50,000
                 };
             </pre>
+            In the above example, <br>
+            - The <code>name</code> property can be accessed by anyone who has access to
+            the <code>accountDetails</code> object. <br>
+            - The <code>_accountBalance</code> property is private because it
+            starts with an underscore and it is not intended to be manipulated. However,
+            it can be reassigned as <pre>accountDetails._accountBalance = 2000</pre><br><br>
+            
+           Let's look at another illustration what the result will print: 
+
+           <pre>
+            const car = {
+                _horsePower: 250,
+                boostPower(){
+                    this._horsePower += 75;
+            document.write(`Power Boosted! The car now has ${this._horsePower}hp.`)
+                }
+            };
+            //reassigning _horsePower
+            car._horsePower = '300hp';
+
+            //calling boosPower on Car
+            car.boostPower();
+           </pre>
+        </p>
+
+        <h3>Output:</h3>
+
+
 
     
     </section>
