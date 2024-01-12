@@ -52,6 +52,62 @@
             </pre>
         </p>
 
+        <h3>Output:</h3>
 
+        <script>
+                const person = {
+                    _firstName: 'John',
+                    _lastName: 'Doe',
+                    getfullName() {
+                        if (this._firstName && this._lastName) {
+                            return `${this._firstName} ${this._lastName}`;
+                            } else {
+                                return 'Both firstName and lastName are required';
+                            }
+                        },
+                }
+                //To call the getter method:
+                document.write(`${person.getfullName()}`);
+        </script>
+
+        <p>
+            Notice that in the above getter method example above:
+            <ul>
+                <li>We use the <code>get</code> keyword followed by a function.</li>
+                <li>
+                    We use an <code>if...else</code> conditional to check if both <code>_firstName</code> 
+                    and <code>_lastName</code> exist (by making sure they both return truthy values) and 
+                    then return a different value depending on the result.
+                </li>
+                <li>
+                    We can access the calling object’s internal properties using <code>this.</code> In 
+                    <code>fullName</code>, we’re accessing both <code>this._firstName</code> and 
+                    <code>this._lastName</code>.
+                </li>
+                <li>
+                    In the last line we call <code>fullName</code> on <code>person</code>. In general, 
+                    getter methods do not need to be called with a set of parentheses. Syntactically, 
+                    it looks like we’re accessing a property.
+                </li>
+            </ul>
+        </p>
+
+        <h2>Advantages of using Getter Method</h2>
+        <ol>
+            <li>Encapsulation - Hides the underlying implementation from outside world.</li>
+            <li>Control over data exposure - Allows you to control what parts of your code
+                should have direct access to other parts.
+            </li>
+            <li>Maintainability - If you decide to change how you store or retrieve data
+                later, only one place needs to be changed instead of multiple places.
+            </li>
+            <li>Getters can perform an action on the data when getting a property.</li>
+            <li>Getters can return different values using conditionals.</li>
+            <li>In a getter, we can access the properties of the calling object using <code>this.</code></li>
+            <li>The functionality of our code is easier for other developers to understand.</li>
+        </ol>
+
+
+    </section>
 </body>
 </html>
