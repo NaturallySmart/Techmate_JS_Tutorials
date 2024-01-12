@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Advance Objects | Getters</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Advance Objects | Getters</h1>
+
+        <p>
+            In JavaScript, you can use getter methods to retrieve the value of an object's property
+            when it is accessed through a specific reference or dot notation.
+            A getter method is defined by using the "get" keyword followed by the desired property name
+            and placing the code block in curly braces {}. The special "this" keyword inside
+            a getter refers to the object itself. <br>
+
+            Let’s take a look at a simple getter method:
+
+            <pre>
+                let person = {
+                    firstName: 'John',
+                    lastName: 'Doe',
+                    get fullName() {
+                        return `${this.firstName} ${this.lastName}`;
+                    }
+                };
+                // To call the getter method:
+                console.log(person.fullName);  // Output: John Doe
+            </pre>
+
+            Here's another example:
+
+            <pre>
+                const person = {
+                    _firstName: 'John',
+                    _lastName: 'Doe',
+                    getfullName() {
+                        if (this._firstName && this._lastName) {
+                            return `${this._firstName} ${this._lastName}`;
+                            } else {
+                                return 'Both firstName and lastName are required';
+                            }
+                        },
+                }
+
+                //To call the getter method:
+                person.fullName; //Output: Both names
+            </pre>
+        </p>
+
+
+</body>
+</html>
