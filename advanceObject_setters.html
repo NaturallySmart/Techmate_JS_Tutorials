@@ -92,7 +92,114 @@
            
         </script>
 
+<p>
+    Setter methods like <code>age</code> do not need to be called with a set of parentheses. 
+    Syntactically, it looks like we’re reassigning the value of a property. <br><br>
 
+    Like getter methods, there are similar advantages to using setter methods that include 
+    checking input, performing actions on properties, and displaying a clear intention for 
+    how the object is supposed to be used. Nonetheless, even with a setter method, it is 
+    still possible to directly reassign properties. For example, in the example above, 
+    we can still set <code>._age</code> directly:
+
+    <pre>
+        person._age = 'forty-five'
+        console.log(person._age); // Prints forty-five
+    </pre>
+</p>
+
+Let's look at another example:
+
+<pre>
+    const student = {
+        _name: "John",
+        _subject: "javascript",
+        _score: 70,
+        get score(){
+            if(typeof this._score === 'number'){
+                return `${this._name} got ${this._score}% in 
+                ${this._subject} exam`
+            }else{
+                throw Error("Score should be a number");
+            }                
+        },
+        set score(value){
+            if (typeof value === 'number' && value >= 75) {
+                this._score = value;
+                } else {
+                    throw Error (`You need a minimum score of 75% to pass 
+                    ${this._subject}.`);                   
+                }
+        }
+    };
+    student.score = 80;
+    console.log(student.score);
+</pre>
+
+<h3>Output:</h3>
+<script>
+    const student = {
+        _name: "John",
+        _subject: "javascript",
+        _score: 70,
+        get score(){
+            if(typeof this._score === 'number'){
+                return `${this._name} got ${this._score}% in ${this._subject} exam`
+            }else{
+                throw Error("Score should be a number");
+            }                
+        },
+        set score(value){
+            if (typeof value === 'number' && value >= 75) {
+                this._score = value;
+                } else {
+                    throw Error (`You need a minimum score of 75% to pass ${this._subject}.`);                   
+                }
+        }
+    };
+    student.score = 80;
+    document.write(student.score);
+</script>
+
+<p class="note">
+    You can change the score to a value lower than 75 and check the console to see the output
+</p>
+
+<!-- <script>
+
+    // FROM CODECADEMY
+
+    const robot = {
+        _model: '1E78V2',
+        _energyLevel: 100,
+        _numOfSensors: 15,
+
+        get numOfSensors(){
+            if(typeof this._numOfSensors === 'number'){
+                return this._numOfSensors;
+            } else {
+                return 'Sensors are currently down.'
+            }
+        },
+
+        set numOfSensors(num){
+            if (typeof num === 'number' && num >= 0){
+                this._numOfSensors = num;
+            } else{
+                document.write('Pass in a number that is greater than or equal to 0')
+            }
+        }  
+    };
+    robot.numOfSensors = 'five';
+
+    document.write(robot.numOfSensors) -->
+</script>
+
+
+<div class="nav-button">
+    <button class="back-btn"><a href="advanceObject_getters.html">BACK</a></button>
+    <button class="next-btn"><a href="advanceObject_factory.html">NEXT</a></button>       
+</div> 
     
     </section>
 </body>
