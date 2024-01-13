@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Advance Objects | Setters</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Advance Objects | Setters</h1>
+
+        <p>
+            In this lesson we will learn how to use setter methods in JavaScript objects. A set
+            method is a special type of method that allows you to modify the properties of an object.
+            It takes one parameter which represents the value that should be assigned to the property. <br>
+
+            While the getter method is used to retrieve (get) the value of an object's property, the setter method 
+            is used to modify (reassign) the value of an object's property. <br>
+
+            Let's see an illustration:
+
+            <pre>
+                const person = {
+                    _age: 25,
+                    set age(newAge){
+                      if (typeof newAge === 'number'){
+                        this._age = newAge;
+                      } else {
+                        console.log('Only numbers are allowed');
+                      }
+                    }
+                  };
+            </pre>
+
+   
+    </section>
+</body>
+</html>
