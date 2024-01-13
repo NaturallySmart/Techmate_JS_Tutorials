@@ -34,7 +34,66 @@
                   };
             </pre>
 
-   
+            Here's what happened in the illustration above:
+
+            <li>We can perform a check for what value is being assigned to <code>this._age.</code></li>
+            <li>When we use the setter method, on values that are numbers will reassign <code>this.age</code></li>
+            <li>There are different outputs depending on what values are used to reassign <code>this._age.</code></li>
+            
+            Now let's use the setter method:
+
+            <pre>
+                const person = {
+                    _age: 25,
+                    get age(){
+                        if(typeof this._age === 'number'){
+                            return this._age;
+                            }else{
+                                throw Error("Not a valid number");
+                        }
+                    },
+                    set age(newAge){
+                        if (typeof newAge === 'number'){
+                            this._age = newAge;
+                        } else {
+                            throw Error('Only numbers are allowed');
+                        }
+                    }
+                };
+    
+                person.age = 30;
+                document.write(person.age); // Output: 30
+            </pre>
+        </p>
+
+        <h3>Output:</h3>
+
+        <script>
+            const person = {
+                _age: 25,
+                get age(){
+                    if(typeof this._age === 'number'){
+                        return this._age;
+                        }else{
+                            throw Error("Not a valid number");
+                    }
+                },
+                set age(newAge){
+                    if (typeof newAge === 'number'){
+                        this._age = newAge;
+                    } else {
+                        throw Error('Only numbers are allowed');
+                    }
+                }
+            };
+
+            person.age = 30;
+            document.write(person.age); // Output: 30
+           
+        </script>
+
+
+    
     </section>
 </body>
 </html>
