@@ -48,6 +48,76 @@
             </pre>
         </p>
 
+        <h3>Output:</h3>
 
+        <script>
+            const carFactory = (year, horsepower, trim, name) => {
+               return {
+                    year: year,
+                    horsepower: horsepower,
+                    trim: trim,
+                    carName() {
+                        document.write(name);
+                    }
+                }                
+            };
+            // Creating a Car using the Factory Function
+            const myCar = carFactory(2019, '350hp', "Sport", "Toyota Corolla");
+            myCar.carName(); // Output: Toyota Corolla
+
+        </script>
+
+        <p>        
+            Now that we have been able to create <code>myCar</code> object by calling <code>carFactory</code>
+            function with parameters for model year, horsepower, trim and name of the car. With this, we don't 
+            need to create an object literal anytime we need to create a new car. Instead we can just invoke 
+            the factory function and pass in the required arguments to make a car for us. <br><br>    
+        
+            We can also
+            access properties like this:
+            <ul>
+                <li><code>myCar.year</code>: 2019</li>
+                <li><code>myCar.horsepower</code>: 350hp</li>
+                <li><code>myCar.trim</code>: Sport</li>
+            </ul>
+            And call methods like this:
+            <ul>
+                <li><code>myCar.carName()</code>: This will print "Toyota Corolla" in the output section.</li>            
+            </ul>
+        </p>
+
+        <!-- <script>
+            const monsterFactory = (name, age, energySource, catchPhrase) => {
+                return { 
+                    name: name,
+                    age: age, 
+                    energySource: energySource,
+                    scare() {
+                        console.log(catchPhrase);
+                    } 
+                }
+            };
+
+            const ghost = monsterFactory('Ghouly', 251, 'ectoplasm', 'BOO!');
+            ghost.scare(); // 'BOO!'
+        </script> -->
+
+        <pre>
+            const robotFactory = (model, mobile) => {
+                return {
+                    model: model,
+                    mobile: mobile,
+                    beep (){
+                        console.log('Beep Boop')
+                    }
+                }
+            };
+
+            const tinCan = robotFactory('P-500', true);
+            tinCan.beep();
+        </pre>
+
+    
+    </section>
 </body>
 </html>
