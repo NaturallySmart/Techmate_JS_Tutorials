@@ -117,7 +117,26 @@
             tinCan.beep();
         </pre>
 
-    
+        <h3>Output:</h3>
+        <script>
+            const robotFactory = (model, mobile) => {
+                return {
+                    model: model,
+                    mobile: mobile,
+                    beep (){
+                        document.write('Beep Boop')
+                    }
+                }
+            };
+
+            const tinCan = robotFactory('P-500', true);
+            tinCan.beep();
+        </script>    
+
+        <div class="nav-button">
+            <button class="back-btn"><a href="advanceObject_setters.html">BACK</a></button>
+            <button class="next-btn"><a href="advanceObject_shorthand.html">NEXT</a></button>       
+        </div>     
     </section>
 </body>
 </html>
