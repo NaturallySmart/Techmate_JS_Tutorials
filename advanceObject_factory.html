@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Advance Objects | Factory Functions</title>
+</head>
+<body>
+    <section class="lesson">
+
+        <h1>Advance Objects | Factory Functions</h1>
+        
+        <p>
+            We have been creating objects individually in previous lessons, but there are times 
+            where we want to create many instances of an object quickly. To do this, we need a 
+            <code>Factory Function</code>. Picture a real world car manufacturing factory, they
+            don't make one car at a time, they make cars by the truckload (thousands). The same 
+            concept applies here with JavaScript. <br><br>
+
+            With Factory Function, we can create a function that we return an object that can be
+            reused to make multiple object instance. Factory functions can also have parameters 
+            allowing us to customize the object that gets returned. <br><br>
+
+            A factory function is simply a special kind of function that returns an object instance.
+            It takes some data as its argument and uses it to generate a new object. <br><br>
+
+            Now let's say we run a factory where cars are manufactured, and in this factory, we make
+            different types of cars by running a code. Now instead of making each car individually,
+            we will use our factory function to make all these cars for us! <br><br>
+
+            Let's see an example:
+
+            <pre>
+                const carFactory = (year, horsepower, trim, name) => {
+                    return {
+                        year: year,
+                        horsepower: horsepower,
+                        trim: trim,
+                        carName() {
+                            console.log(name);
+                        }
+                    }                
+                };
+                // Creating a Car using the Factory Function
+                const myCar = carFactory(2019, '350hp', "Sport", "Toyota Corolla");
+                myCar.carName(); // Output: Toyota Corolla
+            </pre>
+        </p>
+
+
+</body>
+</html>
