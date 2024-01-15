@@ -73,7 +73,28 @@
 
         <h3>Output:</h3>
 
-       
+        <script>
+            const carFactory = (year, horsepower, trim, name) => {
+               return {
+                    year,
+                    horsepower,
+                    trim,
+                    carName() {
+                        document.write(name);
+                    }
+                }                
+            };
+            // Creating a Car using the Factory Function
+            const myCar = carFactory(2019, '350hp', "Sport", "Toyota Corolla");
+            myCar.carName(); // Output: Toyota Corolla
+
+        </script>
+
+   
+        <div class="nav-button">
+            <button class="back-btn"><a href="advanceObject_factory.html">BACK</a></button>
+            <button class="next-btn"><a href="advanceObject_destructured.html">NEXT</a></button>       
+        </div>     
     </section>
 </body>
 </html>
