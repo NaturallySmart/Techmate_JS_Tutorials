@@ -30,7 +30,50 @@
                 };
             </pre>
             
+            Imagine if we had to include more properties, that process would quickly become tedious! 
+            But we can use a destructuring technique, called property value shorthand, to save 
+            ourselves some keystrokes. The example below works exactly like the example above:
 
+            <pre>
+                const carFactory = (year, horsepower, trim, name) => {
+                    return {
+                        year,
+                        horsepower,
+                        trim
+                    }                
+                };
+            </pre>
+        </p>
+
+        <p class="note">
+            Notice that we don’t have to repeat ourselves for property assignments!
+        </p>
+
+        <p>
+            Let's see a full example and check if it works using the code we have used before.
+        </p>
+
+
+        <pre>
+            const carFactory = (year, horsepower, trim, name) => {
+                return {
+                     year,
+                     horsepower,
+                     trim,
+                     carName() {
+                         document.write(name);
+                     }
+                 }                
+             };
+             // Creating a Car using the Factory Function
+             const myCar = carFactory(2019, '350hp', "Sport", "Toyota Corolla");
+             myCar.carName(); // Output: Toyota Corolla
+        </pre>
+
+
+        <h3>Output:</h3>
+
+       
     </section>
 </body>
 </html>
