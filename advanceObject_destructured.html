@@ -35,6 +35,58 @@
                 };
             </pre>
 
+            If we wanted to extract the <code>capacity</code> property as a variable, we could use the following code:
+            
+            <pre>
+                const capacity = airline.capacity; 
+                console.log(capacity); // Prints 400 
+            </pre>
+
+            However, we can also take advantage of a destructuring technique called destructured assignment 
+            to save ourselves some keystrokes. In destructured assignment we create a variable with the name 
+            of an object’s key that is wrapped in curly braces { } and assign to it the object. Take a look 
+            at the example below:
+
+            <pre>
+                const { capacity } = airline; 
+                console.log(capacity); // Prints 400;
+            </pre>
+
+            Look back at the <code>airline</code> object’s properties in the first code example. Then, 
+            in the example above, we declare a new variable <code>capacity</code> that extracts the value 
+            of the <code>capacity</code> property of <code>airline</code>. When we log the value of 
+            <code>capacity</code> to the console, <code>400</code> is printed. <br><br>
+
+            We can even use destructured assignment to grab nested properties of an object:
+
+            <pre>
+                const { captain } = airline.crew; 
+                console.log(captain); // Prints 'Captain John'
+            </pre>
+            
+        Now let's see a full example:
+
+        <pre>
+            const airline = {
+                name: 'TurboJet',
+                flightNumber: 74532,
+                capacity: 400,
+                crew: {
+                    captain(){
+                        document.write('Captain John');
+                    },
+                    firstOfficer(){
+                        document.write('First Officer Mike');
+                    },
+                    airHostess(){
+                        document.write('Air Hostess Samantha')
+                    }
+                }
+            };
+            const {crew} = airline;
+            crew.captain();
+        </pre>
+
 
 
     </section>
