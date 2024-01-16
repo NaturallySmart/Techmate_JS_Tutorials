@@ -87,7 +87,70 @@
             crew.captain();
         </pre>
 
+        <h3>Output:</h3>
+            
+            <script>
+                const airline = {
+                    name: 'TurboJet',
+                    flightNumber: 74532,
+                    capacity: 400,
+                    crew: {
+                        captain(){
+                            document.write('Captain John');
+                        },
+                        firstOfficer(){
+                            document.write('First Officer Mike');
+                        },
+                        airHostess(){
+                            document.write('Air Hostess Samantha')
+                        }
+                    }
+                };
+                const {crew} = airline;
+                crew.captain();
 
+            </script>
+
+            <!-- <pre>
+                const person = { firstName: 'John', lastName: 'Doe', age:32 };
+                // Using destructuring assignment
+                let {firstName, lastName} = person;
+                console.log(firstName);  // Output: John
+                console.log(lastName);   // Output: Doe
+            </pre>
+            Now let's try something a bit more complex with nested properties and default values:
+
+            <pre>
+                const data = [
+                {name:'John',age:15},
+                {name:'Jane',age:25},
+                {name:'Alice'}
+                ];
+                for (let d of data) {
+                    let {name: n = 'Anonymous', age: a = 0 } =
+                    d || {};
+                    console.log(`${n} is ${a}`);
+                }
+            </pre> -->
+        </p>
+
+        <script>
+            const data = [
+                {name:'John',age:15},
+                {name:'Jane',age:25},
+                {name:'Alice'}
+                ];
+                for (let d of data) {
+                    let {name: n = 'Anonymous', age: a = 0 } =
+                    d || {};
+                    console.log(`${n} is ${a}`);
+                };                
+        </script>
+    
+        <div class="nav-button">
+            <button class="back-btn"><a href="advanceObject_shorthand.html">BACK</a></button>
+            <button class="next-btn"><a href="advanceObject_built.html">NEXT</a></button>       
+        </div> 
 
     </section>
 </body>
